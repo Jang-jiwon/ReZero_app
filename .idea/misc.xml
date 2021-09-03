@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/drawable/login_bg.xml" value="0.2" />
+        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/activity_main.xml" value="0.18229166666666666" />
+        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/login_1_.xml" value="0.16893115942028986" />
         <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/background_rounding.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/black_ladius.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/boxbtn.xml" value="0.26979166666666665" />
@@ -34,6 +37,7 @@
         <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/layout/fragment_new.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/layout/fragment_second.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/layout/fragment_today.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable-v24/custom_check.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable-v24/custom_checkbox.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/gobtnsize.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/shape.xml" value="0.26979166666666665" />
@@ -46,10 +50,11 @@
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/fragment_today.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/pricesort_btn_bottom_sheet.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/sort_btn_bottom_sheet.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/yoony/AndroidStudioProjects/ReZero_app/app/src/main/res/layout/activity_product_select.xml" value="0.1" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

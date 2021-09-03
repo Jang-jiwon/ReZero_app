@@ -109,6 +109,10 @@ public class MainActivity extends AppCompatActivity {
                         myBtn.setBackgroundColor(Color.WHITE);
 
                     }
+
+                    //로그인 화면으로 이동
+                    Intent intent = new Intent(MainActivity.this, login_1_activity.class);
+                    startActivity(intent);
                     return false;
                 }
             });

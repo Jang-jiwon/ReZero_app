@@ -1,9 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="인기순"
+            android:textColor="#263959"
+            android:layout_weight="8"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/nanumsquare"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:button="@null"
+            android:background="@drawable/custom_check"
+            android:maxHeight="16dp"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slicebar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="최신순"
+            android:textColor="#263959"
+            android:layout_weight="8"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/nanumsquare"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:button="@null"
+            android:background="@drawable/custom_check"
+            android:maxHeight="16dp"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slicebar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="리뷰 많은순"
+            android:textColor="#263959"
+            android:layout_weight="8"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/nanumsquare"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:button="@null"
+            android:background="@drawable/custom_check"
+            android:maxHeight="16dp"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slicebar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="저가순"
+            android:textColor="#263959"
+            android:layout_weight="8"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/nanumsquare"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:button="@null"
+            android:background="@drawable/custom_check"
+            android:maxHeight="16dp"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slicebar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="고가순"
+            android:textColor="#263959"
+            android:layout_weight="8"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/nanumsquare"/>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:button="@null"
+            android:background="@drawable/custom_check"
+            android:maxHeight="16dp"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slicebar" />
+
 
 
     <Button
@@ -16,4 +148,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

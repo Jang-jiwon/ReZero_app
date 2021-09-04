@@ -1,7 +1,9 @@
 package com.example.rezero;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +11,12 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
 
 /**
@@ -68,6 +75,10 @@ public class ProductFragment extends Fragment implements SortBtnBottomSheetDialo
     Button btnOK;
 
     private LinearLayout sortBtn,categoryBtn,priceSortBtn;
+    // 세로줄수 - colum 가로줄수 - dataNum/colum
+    TableLayout table;
+    int colum=3;
+    int dataNum=30;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -111,6 +122,63 @@ public class ProductFragment extends Fragment implements SortBtnBottomSheetDialo
 
             }
         });
+
+        // 테이블 생성
+        table = (TableLayout) view.findViewById(R.id.table_product);
+
+        //TableRow tableRow = new TableRow(this);
+        TableRow[] tableRow = new TableRow[dataNum/colum];
+        for (int i=0; i<dataNum/colum;i++){
+            tableRow[i] = new TableRow(getContext());
+            tableRow[i].setPadding(10,10,10,10);
+            tableRow[i].setLayoutParams(new TableRow.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT));
+        }
+
+
+        RelativeLayout.LayoutParams likeBtnParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        for(int i = 0 ; i <(dataNum/colum) ; i++) {
+            for (int j=0;j<colum;j++){
+                //렐러티브레이아웃크기조정을위한 리니어
+                LinearLayout lilay= new LinearLayout(getContext());
+                lilay.setPadding(10,10,10,10);
+                lilay.setGravity(Gravity.CENTER);
+                lilay.setOrientation(LinearLayout.VERTICAL);
+                //제품이미지배경레이어
+                RelativeLayout ry = new RelativeLayout(getContext());
+                ry.setPadding(5,5,20,10);
+                ry.setLayoutParams(new RelativeLayout.LayoutParams(300,300));
+                // 여기에 사진백그라운드로부착
+                ry.setBackground(getResources().getDrawable(R.drawable.eximg));
+                //좋이여버튼생성
+                CheckBox likeBtn = new CheckBox(getContext());
+                likeBtn.setButtonDrawable(R.drawable.custom_checkbox);
+                likeBtn.setBackgroundColor(Color.TRANSPARENT);
+                likeBtn.setLayoutParams(likeBtnParams);
+                likeBtnParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+                likeBtnParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+                //좋아요버튼부착
+                ry.addView(likeBtn);
+                //상품명이랑가격
+                TextView pName= new TextView(getContext());
+                pName.setText("상품명");
+                pName.setTextColor(Color.parseColor("#263959"));
+                pName.setGravity(Gravity.CENTER);
+                TextView pPrice= new TextView(getContext());
+                pPrice.setText("가격");
+                pPrice.setTextColor(Color.parseColor("#263959"));
+                pPrice.setGravity(Gravity.CENTER);
+                lilay.addView(ry);
+                lilay.addView(pName);
+                lilay.addView(pPrice);
+                tableRow[i].addView(lilay);
+            }
+        }
+        for(int i=0;i<dataNum/colum;i++){
+            table.addView(tableRow[i]);
+        }
+
 
         return view;
     }

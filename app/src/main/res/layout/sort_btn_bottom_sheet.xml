@@ -25,7 +25,7 @@
         <CheckBox
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.8"
+            android:layout_weight="0.6"
             android:button="@null"
             android:background="@drawable/custom_check"
             android:maxHeight="16dp"/>
@@ -50,7 +50,7 @@
         <CheckBox
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.8"
+            android:layout_weight="0.6"
             android:button="@null"
             android:background="@drawable/custom_check"
             android:maxHeight="16dp"/>
@@ -75,7 +75,7 @@
         <CheckBox
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.8"
+            android:layout_weight="0.6"
             android:button="@null"
             android:background="@drawable/custom_check"
             android:maxHeight="16dp"/>
@@ -100,7 +100,7 @@
         <CheckBox
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.8"
+            android:layout_weight="0.6"
             android:button="@null"
             android:background="@drawable/custom_check"
             android:maxHeight="16dp"/>
@@ -125,7 +125,7 @@
         <CheckBox
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.8"
+            android:layout_weight="0.6"
             android:button="@null"
             android:background="@drawable/custom_check"
             android:maxHeight="16dp"/>

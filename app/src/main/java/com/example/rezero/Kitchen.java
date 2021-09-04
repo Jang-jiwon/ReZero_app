@@ -52,6 +52,11 @@ public class Kitchen extends AppCompatActivity {
                 public void onTabReselected(TabLayout.Tab tab) {
                 }
             });}
+
+
+
+
+
     }
 
     //텝뷰

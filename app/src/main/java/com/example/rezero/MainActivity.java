@@ -100,6 +100,9 @@ public class MainActivity extends AppCompatActivity {
             myBtn.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View view, MotionEvent event) {
+                    //로그인 화면으로 이동
+                    Intent intent = new Intent(MainActivity.this, login_1_activity.class);
+                    startActivity(intent);
                     if (event.getAction() == MotionEvent.ACTION_DOWN) {
 
                         myBtn.setBackgroundColor(Color.parseColor("#F5F5F5"));
@@ -110,9 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
 
-                    //로그인 화면으로 이동
-                    Intent intent = new Intent(MainActivity.this, login_1_activity.class);
-                    startActivity(intent);
+
                     return false;
                 }
             });

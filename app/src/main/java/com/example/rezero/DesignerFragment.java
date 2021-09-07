@@ -1,11 +1,18 @@
 package com.example.rezero;
 
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
-import androidx.fragment.app.Fragment;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,6 +29,12 @@ public class DesignerFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    ArrayList<ListV> designerDataList;
+
+    private View view;
+
+
 
     public DesignerFragment() {
         // Required empty public constructor
@@ -58,6 +71,35 @@ public class DesignerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_designer, container, false);
+
+        view = inflater.inflate(R.layout.fragment_designer, container, false);
+
+        this.InitializeMovieData();
+
+        ListView listView = (ListView)view.findViewById(R.id.listView);
+        final ListAdapter listAdapter = new ListAdapter(getContext(),designerDataList);
+
+        listView.setAdapter(listAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView parent, View v, int position, long id){
+                Toast.makeText(getContext().getApplicationContext(),
+                        listAdapter.getItem(position).getDesignerName(),
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+
+        return view;
+    }
+
+    public void InitializeMovieData()
+    {
+        designerDataList = new ArrayList<ListV>();
+
+        //movieDataList.add(new ListV(R.drawable.pic1, "미션임파서블","15세 이상관람가"));
+        for (int i=0;i<20;i++){
+            designerDataList.add(new ListV( "디자이너명","디자이너소개"));
+        }
     }
 }

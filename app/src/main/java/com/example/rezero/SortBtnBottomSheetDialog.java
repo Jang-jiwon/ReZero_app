@@ -2,11 +2,14 @@ package com.example.rezero;
 
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,6 +27,12 @@ public class SortBtnBottomSheetDialog extends BottomSheetDialogFragment {
     // 바텀시트 숨기기 버튼
     private Button btn_hide_bt_sheet,okCategory,okPricesort;
 
+    //카테고리버튼 아이디들
+    int[] cateIDs = {R.id.allBtn,R.id.kitchenBBtn,R.id.bathBBtn,R.id.livingBBtn,R.id.pencyBBtn,R.id.bookBBtn,R.id.foodBBtn,
+            R.id.cosmBBtn,R.id.petBBtn,R.id.womanBBtn};
+
+    //카테고리체크박스배열
+    CheckBox[] cates = new CheckBox[cateIDs.length];
 
     @Nullable
     @Override
@@ -33,7 +42,7 @@ public class SortBtnBottomSheetDialog extends BottomSheetDialogFragment {
         //그아이디가 인기순버튼일경우 sort_btnbottom_sheet를 view로 인플레이트하기
         //그아이디가 카테고리일경우 view를 카테고리 바텀시트로 인플레이트하기
 
-        if(ProductFragment.selectedBtnId== R.id.sortBtn){
+        if(ProductFragment.selectedBtnId== R.id.sortBtn){//인기순 눌럿을경우
             view = inflater.inflate(R.layout.sort_btn_bottom_sheet, container, false);
             btn_hide_bt_sheet = view.findViewById(R.id.btn_hide_bt_sheet);
             btn_hide_bt_sheet.setOnClickListener(new View.OnClickListener() {
@@ -43,8 +52,26 @@ public class SortBtnBottomSheetDialog extends BottomSheetDialogFragment {
                 }
             });
             return view;
-        }else if (ProductFragment.selectedBtnId== R.id.categoryBtn){
+        }else if (ProductFragment.selectedBtnId== R.id.categoryBtn){//카테고리눌럿을경우
             view = inflater.inflate(R.layout.category_btn_bottom_sheet, container, false);
+            //카테고리의 체크박스들 객체생성
+            for(int i=0;i<cateIDs.length;i++){
+                cates[i] = (CheckBox) view.findViewById(cateIDs[i]);
+            }
+            //체크박스별 체크이벤트
+            for (int i=0;i<cateIDs.length;i++){
+                cates[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                        if (b==true){
+                            compoundButton.setTextColor(Color.WHITE);
+                        }else {
+                            compoundButton.setTextColor(Color.parseColor("#6D819C"));
+                        }
+                    }
+                });
+            }
+            //확인버튼
             okCategory = view.findViewById(R.id.okCategory);
             okCategory.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -53,7 +80,7 @@ public class SortBtnBottomSheetDialog extends BottomSheetDialogFragment {
                 }
             });
             return view;
-        }else if(ProductFragment.selectedBtnId== R.id.priceSortBtn){//쉬발
+        }else if(ProductFragment.selectedBtnId== R.id.priceSortBtn){//가격순눌럿을경우
             view = inflater.inflate(R.layout.pricesort_btn_bottom_sheet, container, false);
             okPricesort = view.findViewById(R.id.okPricesort);
             okPricesort.setOnClickListener(new View.OnClickListener() {

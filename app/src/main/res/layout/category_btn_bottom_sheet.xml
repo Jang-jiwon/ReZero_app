@@ -1,18 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingVertical="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="카테고리"
+        android:fontFamily="@font/nanumsquare"
+        android:textColor="#6D819C"
+        android:textSize="20dp"
+        android:layout_margin="10dp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/slicebar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <CheckBox
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_check2"
+            android:text="전체"
+            android:fontFamily="@font/nanumsquare"
+            android:textSize="20dp"
+            android:button="@null"
+            android:textColor="#6D819C"
+            android:id="@+id/allBtn"/>
+
+        <CheckBox
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_check2"
+            android:text="주방"
+            android:fontFamily="@font/nanumsquare"
+            android:textSize="20dp"
+            android:button="@null"
+            android:textColor="#6D819C"
+            android:id="@+id/kitchenBBtn"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <CheckBox
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_check2"
+            android:text="욕실"
+            android:fontFamily="@font/nanumsquare"
+            android:textSize="20dp"
+            android:button="@null"
+            android:textColor="#6D819C"
+            android:id="@+id/bathBBtn"/>
+
+        <CheckBox
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_check2"
+            android:text="리빙"
+            android:fontFamily="@font/nanumsquare"
+            android:textSize="20dp"
+            android:button="@null"
+            android:textColor="#6D819C"
+            android:id="@+id/livingBBtn"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <CheckBox
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_check2"
+            android:text="문구"
+            android:fontFamily="@font/nanumsquare"
+            android:textSize="20dp"
+            android:button="@null"
+            android:textColor="#6D819C"
+            android:id="@+id/pencyBBtn"/>
+
+        <CheckBox
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_check2"
+            android:text="책"
+            android:fontFamily="@font/nanumsquare"
+            android:textSize="20dp"
+            android:button="@null"
+            android:textColor="#6D819C"
+            android:id="@+id/bookBBtn"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <CheckBox
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_check2"
+            android:text="음식"
+            android:fontFamily="@font/nanumsquare"
+            android:textSize="20dp"
+            android:button="@null"
+            android:textColor="#6D819C"
+            android:id="@+id/foodBBtn"/>
+
+        <CheckBox
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_check2"
+            android:text="화장품"
+            android:fontFamily="@font/nanumsquare"
+            android:textSize="20dp"
+            android:button="@null"
+            android:textColor="#6D819C"
+            android:id="@+id/cosmBBtn"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <CheckBox
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_check2"
+            android:text="반려동물"
+            android:fontFamily="@font/nanumsquare"
+            android:textSize="20dp"
+            android:button="@null"
+            android:textColor="#6D819C"
+            android:id="@+id/petBBtn"/>
+
+        <CheckBox
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_check2"
+            android:text="여성용품"
+            android:fontFamily="@font/nanumsquare"
+            android:textSize="20dp"
+            android:button="@null"
+            android:textColor="#6D819C"
+            android:id="@+id/womanBBtn"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/slicebar"/>
 
     <Button
         android:id="@+id/okCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="카테고리"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:background="@drawable/okbtn_ca"
+        android:layout_marginVertical="10dp"
+        android:text="상품보기"
+        android:textSize="20dp"
+        android:textColor="@color/white"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

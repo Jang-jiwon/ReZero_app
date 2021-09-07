@@ -34,6 +34,12 @@ public class SortBtnBottomSheetDialog extends BottomSheetDialogFragment {
     //카테고리체크박스배열
     CheckBox[] cates = new CheckBox[cateIDs.length];
 
+    //가격순버튼 아이디들
+    int[] priceIDs = {R.id.allBBth_pri,R.id.under_1,R.id.above_1,R.id.above_2,R.id.above_3,R.id.above_4,R.id.above_5};
+
+    //가격순체크박스배열
+    CheckBox[] prices = new CheckBox[priceIDs.length];
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -82,6 +88,24 @@ public class SortBtnBottomSheetDialog extends BottomSheetDialogFragment {
             return view;
         }else if(ProductFragment.selectedBtnId== R.id.priceSortBtn){//가격순눌럿을경우
             view = inflater.inflate(R.layout.pricesort_btn_bottom_sheet, container, false);
+            //가격대버튼객체생성
+            for(int i=0;i<priceIDs.length;i++){
+                prices[i] = (CheckBox) view.findViewById(priceIDs[i]);
+            }
+            //가격대버튼별이벤트
+            for (int i=0;i<priceIDs.length;i++){
+                prices[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                        if (b==true){
+                            compoundButton.setTextColor(Color.WHITE);
+                        }else {
+                            compoundButton.setTextColor(Color.parseColor("#6D819C"));
+                        }
+                    }
+                });
+            }
+            //확인버튼
             okPricesort = view.findViewById(R.id.okPricesort);
             okPricesort.setOnClickListener(new View.OnClickListener() {
                 @Override

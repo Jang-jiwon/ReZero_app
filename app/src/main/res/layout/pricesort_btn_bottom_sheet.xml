@@ -1,22 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingVertical="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가격순"
+        android:fontFamily="@font/nanumsquare"
+        android:textColor="#6D819C"
+        android:textSize="20dp"
+        android:layout_margin="10dp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/slicebar"/>
+
+    <CheckBox
+        android:gravity="center"
+        android:layout_marginHorizontal="46dp"
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:button="@null"
+        android:background="@drawable/custom_check3"
+        android:text="전체"
+        android:fontFamily="@font/nanumsquare"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:textColor="#6D819C"
+        android:id="@+id/allBBth_pri"/>
+    <CheckBox
+        android:gravity="center"
+        android:layout_marginHorizontal="46dp"
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:button="@null"
+        android:background="@drawable/custom_check3"
+        android:text="1만원 미만"
+        android:fontFamily="@font/nanumsquare"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:textColor="#6D819C"
+        android:id="@+id/under_1"/>
+    <CheckBox
+        android:gravity="center"
+        android:layout_marginHorizontal="46dp"
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:button="@null"
+        android:background="@drawable/custom_check3"
+        android:text="1만원대"
+        android:fontFamily="@font/nanumsquare"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:textColor="#6D819C"
+        android:id="@+id/above_1"/>
+    <CheckBox
+        android:gravity="center"
+        android:layout_marginHorizontal="46dp"
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:button="@null"
+        android:background="@drawable/custom_check3"
+        android:text="2만원대"
+        android:fontFamily="@font/nanumsquare"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:textColor="#6D819C"
+        android:id="@+id/above_2"/>
+    <CheckBox
+        android:gravity="center"
+        android:layout_marginHorizontal="46dp"
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:button="@null"
+        android:background="@drawable/custom_check3"
+        android:text="3만원대"
+        android:fontFamily="@font/nanumsquare"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:textColor="#6D819C"
+        android:id="@+id/above_3"/>
+    <CheckBox
+        android:gravity="center"
+        android:layout_marginHorizontal="46dp"
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:button="@null"
+        android:background="@drawable/custom_check3"
+        android:text="4만원대"
+        android:fontFamily="@font/nanumsquare"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:textColor="#6D819C"
+        android:id="@+id/above_4"/>
+    <CheckBox
+        android:gravity="center"
+        android:layout_marginHorizontal="46dp"
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:button="@null"
+        android:background="@drawable/custom_check3"
+        android:text="5만원 이상"
+        android:fontFamily="@font/nanumsquare"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:textColor="#6D819C"
+        android:id="@+id/above_5"/>
 
 
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/slicebar"/>
 
     <Button
         android:id="@+id/okPricesort"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="가격순"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:background="@drawable/okbtn_ca"
+        android:layout_marginVertical="10dp"
+        android:text="상품보기"
+        android:textSize="20dp"
+        android:textColor="@color/white"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

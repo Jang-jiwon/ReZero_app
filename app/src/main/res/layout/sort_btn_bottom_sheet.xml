@@ -109,6 +109,7 @@
         android:layout_marginVertical="10dp"
         android:text="상품보기"
         android:textSize="20dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:fontFamily="@font/nanumsquare"/>
 
 </LinearLayout>

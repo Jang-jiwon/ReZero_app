@@ -43,7 +43,7 @@ public class SortBtnBottomSheetDialog extends BottomSheetDialogFragment {
     int[] priceIDs = {R.id.allBBth_pri,R.id.under_1,R.id.above_1,R.id.above_2,R.id.above_3,R.id.above_4,R.id.above_5};
 
     //가격순체크박스배열
-    CheckBox[] prices = new CheckBox[priceIDs.length];
+    RadioButton[] prices = new RadioButton[priceIDs.length];
 
     @Nullable
     @Override
@@ -109,7 +109,7 @@ public class SortBtnBottomSheetDialog extends BottomSheetDialogFragment {
             view = inflater.inflate(R.layout.pricesort_btn_bottom_sheet, container, false);
             //가격대버튼객체생성
             for(int i=0;i<priceIDs.length;i++){
-                prices[i] = (CheckBox) view.findViewById(priceIDs[i]);
+                prices[i] = (RadioButton) view.findViewById(priceIDs[i]);
             }
             //가격대버튼별이벤트
             for (int i=0;i<priceIDs.length;i++){

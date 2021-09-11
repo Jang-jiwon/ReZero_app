@@ -27,8 +27,8 @@ public class Kitchen extends AppCompatActivity {
         //탭레이아웃
         {mTabLayout = (TabLayout) findViewById(R.id.layout_tab);
 
-            mTabLayout.addTab(mTabLayout.newTab().setCustomView(createTabView("상품")));
-            mTabLayout.addTab(mTabLayout.newTab().setCustomView(createTabView("디자이너")));
+            mTabLayout.addTab(mTabLayout.newTab().setText("상품"));
+            mTabLayout.addTab(mTabLayout.newTab().setText("디자이너"));
 
             mViewPager = (ViewPager) findViewById(R.id.pager_content);
             CategoryAdapter mContentsPagerAdapter = new CategoryAdapter(
@@ -57,13 +57,5 @@ public class Kitchen extends AppCompatActivity {
 
 
 
-    }
-
-    //텝뷰
-    private View createTabView(String tabName) {
-        View tabView = LayoutInflater.from(mContext).inflate(R.layout.custom_tab, null);
-        TextView txt_name = (TextView) tabView.findViewById(R.id.txt_name);
-        txt_name.setText(tabName);
-        return tabView;
     }
 }

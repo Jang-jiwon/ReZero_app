@@ -126,10 +126,10 @@ public class MainActivity extends AppCompatActivity {
         //탭레이아웃
         {mTabLayout = (TabLayout) findViewById(R.id.layout_tab);
 
-            mTabLayout.addTab(mTabLayout.newTab().setCustomView(createTabView("TODAY")));
-            mTabLayout.addTab(mTabLayout.newTab().setCustomView(createTabView("BEST")));
-            mTabLayout.addTab(mTabLayout.newTab().setCustomView(createTabView("NEW")));
-            mTabLayout.addTab(mTabLayout.newTab().setCustomView(createTabView("MISSION")));
+            mTabLayout.addTab(mTabLayout.newTab().setText("TODAY"));
+            mTabLayout.addTab(mTabLayout.newTab().setText("BEST"));
+            mTabLayout.addTab(mTabLayout.newTab().setText("NEW"));
+            mTabLayout.addTab(mTabLayout.newTab().setText("MISSION"));
 
             mViewPager = (ViewPager) findViewById(R.id.pager_content);
             ContentsPagerAdapter mContentsPagerAdapter = new ContentsPagerAdapter(
@@ -195,14 +195,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    }
-
-    //텝뷰
-    private View createTabView(String tabName) {
-        View tabView = LayoutInflater.from(mContext).inflate(R.layout.custom_tab, null);
-        TextView txt_name = (TextView) tabView.findViewById(R.id.txt_name);
-        txt_name.setText(tabName);
-        return tabView;
     }
 
 }

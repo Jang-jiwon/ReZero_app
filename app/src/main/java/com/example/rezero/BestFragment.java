@@ -2,14 +2,22 @@ package com.example.rezero;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.android.material.tabs.TabLayout;
+
 public class BestFragment extends Fragment {
+
+    private Context mContext;
+    private ViewPager mViewPager;
+    private TabLayout mTabLayout;
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -55,6 +63,40 @@ public class BestFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_best, container, false);
+
+        //탭레이아웃
+        {mTabLayout = (TabLayout) view.findViewById(R.id.layout_tab_best);
+
+            mTabLayout.addTab(mTabLayout.newTab().setText("전체"));
+            mTabLayout.addTab(mTabLayout.newTab().setText("주방"));
+            mTabLayout.addTab(mTabLayout.newTab().setText("욕실"));
+            mTabLayout.addTab(mTabLayout.newTab().setText("리빙"));
+            mTabLayout.addTab(mTabLayout.newTab().setText("문구"));
+            mTabLayout.addTab(mTabLayout.newTab().setText("책"));
+
+
+            mViewPager = (ViewPager) view.findViewById(R.id.pager_content_best);
+            BestVPagerAdapter mContentsPagerAdapter = new BestVPagerAdapter(
+                    getChildFragmentManager(), mTabLayout.getTabCount());
+            mViewPager.setAdapter(mContentsPagerAdapter);
+
+            mViewPager.addOnPageChangeListener(
+                    new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
+            mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
+                @Override
+                public void onTabSelected(TabLayout.Tab tab) {
+                    mViewPager.setCurrentItem(tab.getPosition());
+                }
+
+                @Override
+                public void onTabUnselected(TabLayout.Tab tab) {
+                }
+
+                @Override
+                public void onTabReselected(TabLayout.Tab tab) {
+                }
+            });}
 
 
 

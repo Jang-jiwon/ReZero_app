@@ -73,6 +73,10 @@ public class BestFragment extends Fragment {
             mTabLayout.addTab(mTabLayout.newTab().setText("리빙"));
             mTabLayout.addTab(mTabLayout.newTab().setText("문구"));
             mTabLayout.addTab(mTabLayout.newTab().setText("책"));
+            mTabLayout.addTab(mTabLayout.newTab().setText("음식"));
+            mTabLayout.addTab(mTabLayout.newTab().setText("화장품"));
+            mTabLayout.addTab(mTabLayout.newTab().setText("반려동물"));
+            mTabLayout.addTab(mTabLayout.newTab().setText("여성용품"));
 
 
             mViewPager = (ViewPager) view.findViewById(R.id.pager_content_best);

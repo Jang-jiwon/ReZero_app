@@ -34,7 +34,18 @@ public class BestVPagerAdapter extends FragmentStatePagerAdapter {
             case 5:
                 BookFragment bookFragment = new BookFragment();
                 return bookFragment;
-
+            case 6:
+                FoodFragment foodFragment = new FoodFragment();
+                return foodFragment;
+            case 7:
+                CosFragment cosFragment = new CosFragment();
+                return cosFragment;
+            case 8:
+                PetFragment petFragment = new PetFragment();
+                return petFragment;
+            case 9:
+                WomanFragment womanFragment = new WomanFragment();
+                return womanFragment;
             default:
                 return null;
         }

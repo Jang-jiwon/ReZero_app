@@ -83,6 +83,7 @@ public class MissionFragment extends Fragment {
                 Intent intent = new Intent(Intent.ACTION_PICK);
                 intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
                 startActivityForResult(intent,GET_GALLERY_IMAGE);
+                //갤러리에서사진가져오는걸활용해서 나중에 코드변경
             }
         });
 

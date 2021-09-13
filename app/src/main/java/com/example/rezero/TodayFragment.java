@@ -1,5 +1,6 @@
 package com.example.rezero;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -93,6 +94,9 @@ public class TodayFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_today, container, false);
 
+        Intent intentP = new Intent(view.getContext(), SelectProduct.class);
+
+
 //        GridLayout gridLayout = (GridLayout) view.findViewById(R.id.gridLayout);
 
         ViewPager viewPager = (ViewPager) view.findViewById(R.id.pagerBanner);
@@ -152,6 +156,12 @@ public class TodayFragment extends Fragment {
                 lilay.addView(pName);
                 lilay.addView(pPrice);
                 tableRow[i].addView(lilay);
+                tableRow[i].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(intentP);
+                    }
+                });
             }
         }
         for(int i=0;i<dataNum/colum;i++){

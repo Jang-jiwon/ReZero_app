@@ -6,7 +6,7 @@
     tools:context=".MissionFragment"
     android:orientation="vertical"
     android:background="@color/white"
-    android:padding="50dp">
+    android:paddingHorizontal="50dp">
 
 
     <LinearLayout
@@ -26,7 +26,8 @@
             android:paddingVertical="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center">
+            android:gravity="center"
+            android:id="@+id/missionL1">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
@@ -142,20 +143,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/slicebar" />
-
-        <TextView
-            android:id="@+id/today"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2020년12월11일"
-            android:textSize="30sp"
-            android:textColor="#263959"
-            android:layout_above="@+id/calendarView"
-            android:layout_centerHorizontal="true"/>
 
         <CalendarView
+            android:layout_marginVertical="10dp"
             android:id="@+id/calendarView"
-            android:textColor="#263959"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#EFF0F3"

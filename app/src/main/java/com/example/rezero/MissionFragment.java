@@ -4,12 +4,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CalendarView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.text.DateFormat;
@@ -60,7 +63,10 @@ public class MissionFragment extends Fragment {
 
 
     CalendarView calendarView;
-    TextView today;
+
+    //갤러리관련
+    LinearLayout openGallery;
+    final int GET_GALLERY_IMAGE = 200;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -69,20 +75,16 @@ public class MissionFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_mission, container, false);
 
         calendarView = (CalendarView) view.findViewById(R.id.calendarView);
-        today = (TextView) view.findViewById(R.id.today);
-        DateFormat formatter = new SimpleDateFormat("2021년09월12일");
-        Date date = new Date(calendarView.getDate());
-        today.setText(formatter.format(date));
-
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+        openGallery = (LinearLayout) view.findViewById(R.id.missionL1);
+        //갤러리로이동
+        openGallery.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                String day;
-                day = year + "년" + (month+1) + "월" + dayOfMonth + "일";
-                today.setText(day);
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+                startActivityForResult(intent,GET_GALLERY_IMAGE);
             }
         });
-
 
         return view;
     }

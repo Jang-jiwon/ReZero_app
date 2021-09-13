@@ -1,21 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MissionFragment"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:padding="50dp">
 
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/text1"
-        android:textColor="@color/black"
-        android:gravity="center"
-        android:text="Mission"/>
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:textColor="#AEAEAE"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:text="2021.08.17~2021.08.24"
+            android:layout_marginVertical="20dp"/>
+        <LinearLayout
+            android:paddingVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:src="@drawable/custom_check"
+                android:layout_marginHorizontal="20dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:text="미션내용"
+                android:textColor="#6D819C"
+                android:textSize="18dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="50p"
+                android:textColor="#263959"
+                android:textSize="18dp"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_marginVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/slicebar" />
+        <LinearLayout
+            android:paddingVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:src="@drawable/custom_check"
+                android:layout_marginHorizontal="20dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:text="미션내용"
+                android:textColor="#6D819C"
+                android:textSize="18dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="50p"
+                android:textColor="#263959"
+                android:textSize="18dp"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_marginVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/slicebar" />
+        <LinearLayout
+            android:paddingVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:src="@drawable/custom_check"
+                android:layout_marginHorizontal="20dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:text="미션내용"
+                android:textColor="#6D819C"
+                android:textSize="18dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="50p"
+                android:textColor="#263959"
+                android:textSize="18dp"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_marginVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/slicebar" />
+        <LinearLayout
+            android:paddingVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:src="@drawable/custom_check"
+                android:layout_marginHorizontal="20dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:text="미션내용"
+                android:textColor="#6D819C"
+                android:textSize="18dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="50p"
+                android:textColor="#263959"
+                android:textSize="18dp"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_marginVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/slicebar" />
+
+        <TextView
+            android:id="@+id/today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2020년12월11일"
+            android:textSize="30sp"
+            android:textColor="#263959"
+            android:layout_above="@+id/calendarView"
+            android:layout_centerHorizontal="true"/>
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:textColor="#263959"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#EFF0F3"
+            />
+    </LinearLayout>
 
 
 
-</LinearLayout>
+</ScrollView>

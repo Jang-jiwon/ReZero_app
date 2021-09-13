@@ -14,7 +14,7 @@
         android:usesCleartextTraffic="true"
 
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <activity
             android:name=".PricesortBtnBottomSheet"

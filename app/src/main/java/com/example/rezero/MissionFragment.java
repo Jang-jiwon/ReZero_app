@@ -1,13 +1,20 @@
 package com.example.rezero;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CalendarView;
 import android.widget.TextView;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MissionFragment extends Fragment {
 
@@ -51,12 +58,30 @@ public class MissionFragment extends Fragment {
         }
     }
 
+
+    CalendarView calendarView;
+    TextView today;
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_mission, container, false);
 
+        calendarView = (CalendarView) view.findViewById(R.id.calendarView);
+        today = (TextView) view.findViewById(R.id.today);
+        DateFormat formatter = new SimpleDateFormat("2021년09월12일");
+        Date date = new Date(calendarView.getDate());
+        today.setText(formatter.format(date));
+
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                String day;
+                day = year + "년" + (month+1) + "월" + dayOfMonth + "일";
+                today.setText(day);
+            }
+        });
 
 
         return view;

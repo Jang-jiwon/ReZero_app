@@ -39,11 +39,11 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/layout_tab"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_gravity="center"
-        app:tabGravity="center"
+        app:tabGravity="fill"
         app:tabTextColor="#AEAEAE"
         app:tabSelectedTextColor="#55967E"
         app:tabIndicatorColor="#55967E"

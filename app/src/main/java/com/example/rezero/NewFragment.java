@@ -80,7 +80,7 @@ public class NewFragment extends Fragment {
 
 
             mViewPager = (ViewPager) view.findViewById(R.id.pager_content_best);
-            BestVPagerAdapter mContentsPagerAdapter = new BestVPagerAdapter(
+            SortProAdapter mContentsPagerAdapter = new SortProAdapter(
                     getChildFragmentManager(), mTabLayout.getTabCount());
             mViewPager.setAdapter(mContentsPagerAdapter);
 

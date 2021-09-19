@@ -128,29 +128,23 @@
                 android:id="@+id/tabLayout"
                 android:background="@color/white"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="메뉴1"/>
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="메뉴1"/>
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="메뉴1"/>
+                android:layout_height="wrap_content"
+                app:tabGravity="fill"
+                app:tabTextColor="#AEAEAE"
+                app:tabSelectedTextColor="#55967E"
+                app:tabIndicatorColor="#55967E"
+                app:tabTextAppearance="@style/TabText">
             </com.google.android.material.tabs.TabLayout>
 
         </com.google.android.material.appbar.AppBarLayout>
 
         <!-- 뷰페이저 (layout_behavior를 "@string/appbar_scrolling_view_behavior"로 설정해야함! ) -->
-        <androidx.viewpager2.widget.ViewPager2
+        <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
     <LinearLayout

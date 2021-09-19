@@ -3,6 +3,9 @@ package com.example.rezero;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,14 +19,12 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import androidx.fragment.app.Fragment;
-
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link AllFragment2#newInstance} factory method to
+ * Use the {@link All2NewVerFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AllFragment2 extends Fragment {
+public class All2NewVerFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +35,7 @@ public class AllFragment2 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public AllFragment2() {
+    public All2NewVerFragment() {
         // Required empty public constructor
     }
 
@@ -44,11 +45,11 @@ public class AllFragment2 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment AllFragment2.
+     * @return A new instance of fragment All2NewVerFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static AllFragment2 newInstance(String param1, String param2) {
-        AllFragment2 fragment = new AllFragment2();
+    public static All2NewVerFragment newInstance(String param1, String param2) {
+        All2NewVerFragment fragment = new All2NewVerFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -83,18 +84,16 @@ public class AllFragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         this.context = getContext();
-        view = inflater.inflate(R.layout.fragment_all2, container, false);
 
-        //view = inflater.inflate(R.layout.fragment_product, container, false);
+        view = inflater.inflate(R.layout.fragment_product, container, false);
 
 
-        /*sortBtn = (LinearLayout) view.findViewById(R.id.sortBtn);
+        sortBtn = (LinearLayout) view.findViewById(R.id.sortBtn);
         categoryBtn = (LinearLayout) view.findViewById(R.id.categoryBtn);
-        priceSortBtn=(LinearLayout)view.findViewById(R.id.priceSortBtn);*/
+        priceSortBtn=(LinearLayout)view.findViewById(R.id.priceSortBtn);
 
-        /*sortBtn.setOnClickListener(new View.OnClickListener() {
+        sortBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -123,7 +122,7 @@ public class AllFragment2 extends Fragment {
                 bottomSheetDialog.show(getFragmentManager(), "exampleBottomSheet");
 
             }
-        });*/
+        });
 
         // 테이블 생성
         table = (TableLayout) view.findViewById(R.id.table_product);

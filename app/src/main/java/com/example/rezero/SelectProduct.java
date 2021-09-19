@@ -10,21 +10,54 @@ import android.view.View;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
+import com.google.android.material.tabs.TabLayout;
+
 import me.relex.circleindicator.CircleIndicator;
 
 public class SelectProduct extends AppCompatActivity {
     ScrollView scroll;
 
+    private TabLayout mTabLayout;
+    private ViewPager mViewPager;
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_product);
-        /*ViewPager viewPager = (ViewPager) findViewById(R.id.pagerBanner);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.pagerBanner);
         CircleIndicator indicator = (CircleIndicator)findViewById(R.id.indicator);
         ProductImgAdapter adapter = new ProductImgAdapter(getSupportFragmentManager());//탭레이아웃대신 서클 인디케이터
         viewPager.setAdapter(adapter);
-        indicator.setViewPager(viewPager);*/
+        indicator.setViewPager(viewPager);
+        //탭레이아웃
+        {mTabLayout = (TabLayout) findViewById(R.id.tabLayout);
+
+            mTabLayout.addTab(mTabLayout.newTab().setText("디테일"));
+            mTabLayout.addTab(mTabLayout.newTab().setText("리뷰"));
+
+
+            mViewPager = (ViewPager) findViewById(R.id.viewPager2);
+            SelectProVPager mContentsPagerAdapter = new SelectProVPager(
+                    getSupportFragmentManager(), mTabLayout.getTabCount());
+            mViewPager.setAdapter(mContentsPagerAdapter);
+
+            mViewPager.addOnPageChangeListener(
+                    new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
+            mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
+                @Override
+                public void onTabSelected(TabLayout.Tab tab) {
+                    mViewPager.setCurrentItem(tab.getPosition());
+                }
+
+                @Override
+                public void onTabUnselected(TabLayout.Tab tab) {
+                }
+
+                @Override
+                public void onTabReselected(TabLayout.Tab tab) {
+                }
+            });}
 
 
     }

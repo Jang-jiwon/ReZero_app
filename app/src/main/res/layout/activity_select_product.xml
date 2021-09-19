@@ -1,117 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SelectProduct"
-    android:background="@color/white"
     android:orientation="vertical"
-    android:gravity="center">
-
-    <ScrollView
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10">
-        <LinearLayout
-            android:layout_width="match_parent"
+        android:layout_weight="1.2"
+        android:padding="5dp">
+
+        <ImageButton
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-            <LinearLayout
+            android:id="@+id/backBtn"
+            android:padding="13dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/backbtn"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:gravity="center"
+            android:id="@+id/searchBar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape"
+            android:paddingRight="15dp"
+            android:drawableRight="@drawable/searchsize"
+            android:layout_weight="10"/>
+    </LinearLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="13"
+        android:id="@+id/container">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:padding="5dp">
+                android:layout_height="wrap_content"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-                <ImageButton
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/backBtn"
-                    android:padding="13dp"
-                    android:background="#00FFFFFF"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/backbtn"
-                    android:layout_weight="1"/>
-
-                <EditText
-                    android:gravity="center"
-                    android:id="@+id/searchBar"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:background="@drawable/shape"
-                    android:paddingRight="15dp"
-                    android:drawableRight="@drawable/searchsize"
-                    android:layout_weight="10"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="620dp"
-                android:orientation="vertical"
-                >
-
-                <androidx.viewpager.widget.ViewPager
-                    android:id="@+id/pagerBanner"
+                <!-- parallax: 스크롤 시 접힘 parallax-->
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="5"
-                    />
-                <me.relex.circleindicator.CircleIndicator
-                    android:id="@+id/indicator"
-                    app:ci_drawable="@drawable/custom_radius"
-                    app:ci_height="7dp"
-                    app:ci_width="7dp"
-                    app:ci_margin="4dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2"
+                    android:layout_height="620dp"
+                    android:background="@color/white"
+                    app:layout_collapseMode="parallax"
                     android:orientation="vertical">
-                    <ImageView
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/pagerBanner"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/slicebar"/>
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="20dp"
-                        android:layout_marginVertical="10dp"
-                        android:drawableLeft="@drawable/designerex"
-                        android:text="    디자이너명    "
-                        android:textColor="#263959"
-                        android:drawableRight="@drawable/rightbtn"
-                        android:background="#0000FF00"/>
-                    <ImageView
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        />
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/indicator"
+                        app:ci_drawable="@drawable/custom_radius"
+                        app:ci_height="7dp"
+                        app:ci_width="7dp"
+                        app:ci_margin="4dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/slicebar"/>
-                    <TextView
-                        android:layout_marginHorizontal="20dp"
-                        android:layout_marginVertical="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="제로웨이스트 제품이름"
-                        android:textSize="21dp"
-                        android:textColor="#263959"/>
-                    <TextView
-                        android:layout_marginHorizontal="20dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="제품가격"
-                        android:textSize="18dp"
-                        android:textColor="#6D819C"/>
-                    <ImageView
+                        android:layout_height="0dp"
+                        android:layout_weight="0.3"/>
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/slicebar"
-                        android:layout_marginBottom="10dp"/>
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/slicebar"/>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginVertical="10dp"
+                            android:drawableLeft="@drawable/designerex"
+                            android:text="    디자이너명    "
+                            android:textColor="#263959"
+                            android:drawableRight="@drawable/rightbtn"
+                            android:background="#0000FF00"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/slicebar"/>
+                        <TextView
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginVertical="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="제로웨이스트 제품이름"
+                            android:textSize="21dp"
+                            android:textColor="#263959"/>
+                        <TextView
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="제품가격"
+                            android:textSize="18dp"
+                            android:textColor="#6D819C"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/slicebar"
+                            android:layout_marginBottom="10dp"/>
+                    </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <!-- pin: 스크롤 시 고정 -->
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <!-- 뷰페이저와 연결할 탭 -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="메뉴1"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="메뉴1"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="메뉴1"/>
+            </com.google.android.material.tabs.TabLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- 뷰페이저 (layout_behavior를 "@string/appbar_scrolling_view_behavior"로 설정해야함! ) -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -136,6 +177,5 @@
             android:fontFamily="@font/nanumsquare"
             android:textSize="20dp"/>
     </LinearLayout>
-
 
 </LinearLayout>

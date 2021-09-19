@@ -4,16 +4,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DetailFragment">
+    tools:context=".DetailFragment"
+    android:id="@+id/scroll">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="900dp"
+            android:gravity="center"
             android:text="제품상세"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:background="#0000FF00"
+            android:text="맨 위로"
+            android:textSize="14dp"
+            android:textColor="#6D819C"
+            android:drawableRight="@drawable/movetop"
+            android:id="@+id/topBtn"/>
+
 
 
     </LinearLayout>

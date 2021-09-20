@@ -1,17 +1,19 @@
 package com.example.rezero;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class product_like extends AppCompatActivity {
 
-    ImageButton homeBtn,boxBtn,likeBtn,myBtn,btnOpenDrawer;
+    ImageButton homeBtn, boxBtn, likeBtn, myBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,12 +21,11 @@ public class product_like extends AppCompatActivity {
         setContentView(R.layout.activity_product_like);
 
         //하단 버튼객체생성
-        homeBtn = (ImageButton)findViewById(R.id.homeBtn);
-        boxBtn = (ImageButton)findViewById(R.id.boxBtn);
-        likeBtn = (ImageButton)findViewById(R.id.likeBtn);
-        myBtn = (ImageButton)findViewById(R.id.myBtn);
+        homeBtn = (ImageButton) findViewById(R.id.homeBtn);
+        boxBtn = (ImageButton) findViewById(R.id.boxBtn);
+        likeBtn = (ImageButton) findViewById(R.id.likeBtn);
+        myBtn = (ImageButton) findViewById(R.id.myBtn);
 
-        //하단바 버튼 누름효과지정
         //하단바 버튼 누름효과지정
         {
             homeBtn.setOnTouchListener(new View.OnTouchListener() {

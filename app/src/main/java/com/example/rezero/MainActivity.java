@@ -184,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
 //                    drawerLayout.closeDrawer(drawerView);
 //                }
 //            });
-          }
+        }
 
         //드로우메뉴바의 버튼객체생성 및 눌럿을때 화면전환
         kitchenBtn = (Button) findViewById(R.id.kitchenBtn);

@@ -7,6 +7,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
@@ -16,6 +17,7 @@ import me.relex.circleindicator.CircleIndicator;
 
 public class SelectProduct extends AppCompatActivity {
     ScrollView scroll;
+    Button butBtn;
 
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
@@ -58,6 +60,16 @@ public class SelectProduct extends AppCompatActivity {
                 public void onTabReselected(TabLayout.Tab tab) {
                 }
             });}
+
+        //구매하기 바텀시트
+        butBtn = (Button) findViewById(R.id.buyBtn);
+        butBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BuyBtnBottomSheetDialog bottomSheetDialog = new BuyBtnBottomSheetDialog();
+                bottomSheetDialog.show(getSupportFragmentManager(), "exampleBottomSheet");
+            }
+        });
 
 
     }

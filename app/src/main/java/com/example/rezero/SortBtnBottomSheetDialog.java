@@ -79,23 +79,7 @@ public class SortBtnBottomSheetDialog extends BottomSheetDialogFragment {
                     }
                 });
             }
-            /*//카테고리의 체크박스들 객체생성
-            for(int i=0;i<cateIDs.length;i++){
-                cates[i] = (CheckBox) view.findViewById(cateIDs[i]);
-            }
-            //체크박스별 체크이벤트
-            for (int i=0;i<cateIDs.length;i++){
-                cates[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                        if (b==true){
-                            compoundButton.setTextColor(Color.WHITE);
-                        }else {
-                            compoundButton.setTextColor(Color.parseColor("#6D819C"));
-                        }
-                    }
-                });
-            }*/
+
             //확인버튼
             okCategory = view.findViewById(R.id.okCategory);
             okCategory.setOnClickListener(new View.OnClickListener() {

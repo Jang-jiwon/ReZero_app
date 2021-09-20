@@ -85,6 +85,9 @@ public class MainActivity extends AppCompatActivity {
             likeBtn.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View view, MotionEvent event) {
+                    //찜 화면으로 이동
+                    Intent intent = new Intent(MainActivity.this, product_like.class);
+                    startActivity(intent);
                     if (event.getAction() == MotionEvent.ACTION_DOWN) {
 
                         likeBtn.setBackgroundColor(Color.parseColor("#F5F5F5"));

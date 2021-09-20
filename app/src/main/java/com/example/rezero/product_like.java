@@ -2,6 +2,7 @@ package com.example.rezero;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -11,8 +12,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.google.android.material.tabs.TabLayout;
+
 public class product_like extends AppCompatActivity {
 
+    private ViewPager mViewPager;
     ImageButton homeBtn, boxBtn, likeBtn, myBtn;
 
     @Override
@@ -26,11 +30,19 @@ public class product_like extends AppCompatActivity {
         likeBtn = (ImageButton) findViewById(R.id.likeBtn);
         myBtn = (ImageButton) findViewById(R.id.myBtn);
 
+        mViewPager = (ViewPager) findViewById(R.id.pager_content);
+        ContentsPagerAdapter mContentsPagerAdapter = new ContentsPagerAdapter(getSupportFragmentManager(),1);
+        mViewPager.setAdapter(mContentsPagerAdapter);
+
+
         //하단바 버튼 누름효과지정
         {
             homeBtn.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View view, MotionEvent event) {
+                    //메인 화면으로 이동
+                    Intent intent = new Intent(product_like.this, MainActivity.class);
+                    startActivity(intent);
                     if (event.getAction() == MotionEvent.ACTION_DOWN) {
 
                         homeBtn.setBackgroundColor(Color.parseColor("#F5F5F5"));
@@ -61,9 +73,6 @@ public class product_like extends AppCompatActivity {
             likeBtn.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View view, MotionEvent event) {
-                    //찜 화면으로 이동
-                    Intent intent = new Intent(product_like.this, product_like.class);
-                    startActivity(intent);
                     if (event.getAction() == MotionEvent.ACTION_DOWN) {
 
                         likeBtn.setBackgroundColor(Color.parseColor("#F5F5F5"));

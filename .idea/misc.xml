@@ -48,6 +48,8 @@
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/carticonsize.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/customsbar.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/gobtnsize.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/rounding4.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/rounding5.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/shape.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/activity_buy_btn_bottom_sheet.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/activity_kitchen.xml" value="0.25364583333333335" />
@@ -77,11 +79,11 @@
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/fragment_review.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/fragment_today.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/fragment_woman.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/group_row.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/pricesort_btn_bottom_sheet.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/sort_btn_bottom_sheet.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/projects/ReZero_app/app/src/main/res/layout/activity_select_product.xml" value="0.2" />
         <entry key="..\:/Users/xks64/Desktop/projects/ReZero_app/app/src/main/res/layout/fragment_detail.xml" value="0.22056159420289856" />
-        <entry key="..\:/Users/yoonui/AndroidStudioProjects/ReZero_app/app/src/main/res/layout/activity_product_like.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/yoony/AndroidStudioProjects/ReZero_app/app/src/main/res/layout/activity_product_select.xml" value="0.1" />
       </map>
     </option>

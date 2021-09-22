@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RatingBar;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,10 +57,28 @@ public class ReviewFragment extends Fragment {
         }
     }
 
+    RatingBar starPoint;
+    TextView score;
+    View view;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_review, container, false);
+        view = inflater.inflate(R.layout.fragment_review, container, false);
+
+        starPoint = (RatingBar) view.findViewById(R.id.starPoint);//.getRating() - 레이팅바 점수 가져오는 함수
+        score = (TextView) view.findViewById(R.id.score);
+
+        //별점이벤트
+        starPoint.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
+                score.setText(Float.toString(v));
+            }
+        });
+
+
+        return view;
     }
 }

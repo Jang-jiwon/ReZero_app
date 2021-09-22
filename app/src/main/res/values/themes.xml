@@ -20,4 +20,7 @@
         //텍스트사이즈
         <item name="android:textSize">20dp</item>
     </style>
+    <style name="CustomRatingBar" parent="Theme.AppCompat">
+        <item name="colorControlActivated">@color/login_bg_green</item>
+    </style>
 </resources>

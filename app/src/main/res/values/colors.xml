@@ -11,4 +11,5 @@
     <color name="login_title_white">#EAEAEA</color>
     <color name="login_white">#FFFFFF</color>
     <color name="login_navy">#263959</color>
+    <color name="gray">#CECECE</color>
 </resources>

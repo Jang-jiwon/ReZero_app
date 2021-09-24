@@ -71,12 +71,13 @@ public class ReviewFragment extends Fragment {
         score = (TextView) view.findViewById(R.id.score);
 
         //별점이벤트
-        starPoint.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+        score.setText(Float.toString(starPoint.getRating()));
+        /*starPoint.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
                 score.setText(Float.toString(v));
             }
-        });
+        });*/
 
 
         return view;

@@ -28,9 +28,6 @@
             android:textColor="#6D819C"
             android:drawableRight="@drawable/movetop"
             android:id="@+id/topBtn"/>
-
-
-
     </LinearLayout>
 
 

@@ -12,10 +12,12 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -141,6 +143,19 @@ public class ReviewFragment extends Fragment {
             basicLay.addView(review[i]);
 
         }
+
+        //1ㄷ1문의버튼
+        LinearLayout.LayoutParams btnParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        btnParams.topMargin=20;
+        btnParams.bottomMargin=20;
+        btnParams.gravity=Gravity.CENTER;
+        Button qnaBtn = new Button(getContext());
+        qnaBtn.setPadding(200,5,200,5);
+        qnaBtn.setLayoutParams(btnParams);
+        qnaBtn.setBackground(getResources().getDrawable(R.drawable.roundingqna));
+        qnaBtn.setText("1:1문의하기");
+        qnaBtn.setTextColor(Color.WHITE);
+        basicLay.addView(qnaBtn);
 
         return view;
     }

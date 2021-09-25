@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".ReviewFragment">
     <LinearLayout
+        android:paddingBottom="20dp"
         android:id="@+id/basicLay"
         android:layout_marginVertical="20dp"
         android:layout_width="match_parent"

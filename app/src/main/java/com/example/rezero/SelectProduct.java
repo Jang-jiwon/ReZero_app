@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,7 @@ import me.relex.circleindicator.CircleIndicator;
 
 public class SelectProduct extends AppCompatActivity {
     ScrollView scroll;
-    Button butBtn;
+    Button butBtn,intent_designer;
 
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
@@ -68,6 +69,17 @@ public class SelectProduct extends AppCompatActivity {
             public void onClick(View view) {
                 BuyBtnBottomSheetDialog bottomSheetDialog = new BuyBtnBottomSheetDialog();
                 bottomSheetDialog.show(getSupportFragmentManager(), "exampleBottomSheet");
+            }
+        });
+
+
+        //디자이너버튼
+        Intent move_designer = new Intent(getApplicationContext(),Designer.class);
+        intent_designer=(Button) findViewById(R.id.intent_designer);
+        intent_designer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(move_designer);
             }
         });
 

@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
@@ -28,10 +29,20 @@ public class Designer extends AppCompatActivity {
     CheckBox likeBtn_d;
     TextView likeNumTxV;
 
+    ImageButton backBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_designer);
+
+        backBtn = (ImageButton)findViewById(R.id.backBtn);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         //좋아요버튼
         likeNumTxV = (TextView)findViewById(R.id.likeNum);

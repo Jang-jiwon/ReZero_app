@@ -1,12 +1,19 @@
 package com.example.rezero;
 
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
 
+import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.fragment.app.Fragment;
 
+import android.support.v4.media.RatingCompat;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -57,9 +64,20 @@ public class ReviewFragment extends Fragment {
         }
     }
 
+    int reviewNum=10;
+
     RatingBar starPoint;
     TextView score;
     View view;
+    LinearLayout basicLay;
+
+    //리뷰생성을위한 배열생성
+    LinearLayout[] llay = new LinearLayout[reviewNum];
+    TextView[] userName = new TextView[reviewNum];
+    RatingBar[] ratingBar = new RatingBar[reviewNum];
+    ImageView[] img = new ImageView[reviewNum];
+    TextView[] review = new TextView[reviewNum];
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -67,18 +85,62 @@ public class ReviewFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_review, container, false);
 
+        //전체별점
         starPoint = (RatingBar) view.findViewById(R.id.starPoint);//.getRating() - 레이팅바 점수 가져오는 함수
         score = (TextView) view.findViewById(R.id.score);
-
-        //별점이벤트
         score.setText(Float.toString(starPoint.getRating()));
-        /*starPoint.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
-                score.setText(Float.toString(v));
-            }
-        });*/
 
+        //사용자리뷰생성
+        basicLay = (LinearLayout)view.findViewById(R.id.basicLay);
+        ContextThemeWrapper contextThemeWrapper = new ContextThemeWrapper(getActivity(), R.style.CustomRatingBar);//레이팅바스타일
+
+        LinearLayout.LayoutParams llayParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        llayParams.topMargin=20;
+
+        LinearLayout.LayoutParams imgParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,600);
+        imgParams.rightMargin=50;
+        imgParams.leftMargin=50;
+        imgParams.topMargin=10;
+
+        LinearLayout.LayoutParams txvParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        txvParams.rightMargin=80;
+        txvParams.leftMargin=80;
+        txvParams.topMargin=10;
+        txvParams.bottomMargin=10;
+
+        for (int i=0;i<reviewNum;i++){
+            llay[i] = new LinearLayout(getContext());
+            userName[i] = new TextView(getContext());
+            ratingBar[i] = new RatingBar(contextThemeWrapper,null,R.attr.ratingBarStyleIndicator);
+            img[i] = new ImageView(getContext());
+            review[i] =new TextView(getContext());
+
+            llay[i].setGravity(Gravity.CENTER);
+            llay[i].setLayoutParams(llayParams);
+
+            userName[i].setText("사용자명");
+            userName[i].setTextColor(Color.parseColor("#263959"));
+            userName[i].setTextSize(18);
+            userName[i].setPadding(10,0,10,0);
+
+            ratingBar[i].setRating(3);
+            ratingBar[i].setMax(5);
+            ratingBar[i].setIsIndicator(true);
+
+            llay[i].addView(userName[i]);
+            llay[i].addView(ratingBar[i]);
+
+            img[i].setBackground(getResources().getDrawable(R.drawable.rounding_imageback));
+            img[i].setLayoutParams(imgParams);
+
+            review[i].setText("-----------리뷰내용---------------");
+            review[i].setLayoutParams(txvParams);
+
+            basicLay.addView(llay[i]);
+            basicLay.addView(img[i]);
+            basicLay.addView(review[i]);
+
+        }
 
         return view;
     }

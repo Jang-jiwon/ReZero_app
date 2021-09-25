@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReviewFragment"
-    android:orientation="vertical">
+    tools:context=".ReviewFragment">
     <LinearLayout
+        android:id="@+id/basicLay"
         android:layout_marginVertical="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,9 +15,8 @@
             android:id="@+id/starPoint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:isIndicator="true"
-            android:stepSize="0.5"
-            android:rating="4.5"
+            android:isIndicator="false"
+            android:rating="5"
             android:max="5"
             android:theme="@style/CustomRatingBar"/>
         <LinearLayout
@@ -59,38 +58,7 @@
                 android:textSize="17dp"
                 android:textColor="#6D819C"/>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:gravity="center">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="사용자명"
-                android:textColor="#263959"
-                android:textSize="18dp"
-                android:layout_marginHorizontal="10dp"/>
-            <RatingBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:isIndicator="true"
-                android:rating="3.5"
-                android:max="5"
-                style="@style/Widget.AppCompat.RatingBar.Indicator"
-                android:theme="@style/CustomRatingBar"/>
-        </LinearLayout>
-        <ImageView
-            android:layout_marginVertical="10dp"
-            android:layout_marginHorizontal="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:background="@drawable/rounding_imageback"/>
-        <TextView
-            android:layout_marginHorizontal="40dp"
-            android:layout_marginVertical="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="마감도별로고 개별로임ㅠ"/>
+
     </LinearLayout>
 </ScrollView>
+

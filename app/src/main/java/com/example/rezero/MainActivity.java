@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout mTabLayout;
     private Context mContext;
 
-    ImageButton homeBtn,boxBtn,likeBtn,myBtn,btnOpenDrawer;
+    ImageButton homeBtn,boxBtn,likeBtn,myBtn,btnOpenDrawer,cartBtn;
 
     //드로우바 메뉴의 버튼객체 선언
     Button kitchenBtn;
@@ -39,6 +39,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mContext = getApplicationContext();
+
+        //장바구니버튼
+        Intent goCart = new Intent(getApplicationContext(),Cart.class);
+        cartBtn = (ImageButton)findViewById(R.id.cartBtn);
+        cartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(goCart);
+            }
+        });
 
         // 드로어 화면을 열고 닫을 버튼 객체 참조
         ImageButton btnOpenDrawer = (ImageButton) findViewById(R.id.btn_OpenDrawer);

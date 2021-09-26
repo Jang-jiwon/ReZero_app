@@ -74,7 +74,7 @@
         android:background="@drawable/slicebar"/>
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="550dp"
         android:padding="10dp">
         <LinearLayout
             android:id="@+id/basicLay"
@@ -83,4 +83,10 @@
             android:orientation="vertical">
         </LinearLayout>
     </ScrollView>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="구매하기"/>
 </LinearLayout>

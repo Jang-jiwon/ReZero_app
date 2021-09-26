@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="130dp"
     android:background="@color/white"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_marginVertical="5dp"
@@ -114,4 +115,9 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+    <ImageView
+        android:layout_marginVertical="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slicebar"/>
 </LinearLayout>

@@ -82,7 +82,7 @@ public class Cart extends AppCompatActivity {
             });
         }
 
-        //전체선택삭제
+        //전체선택
         allCheck = (CheckBox) findViewById(R.id.allCheck);
         allCheck.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

@@ -18,10 +18,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 public class Cart extends AppCompatActivity {
 
     LinearLayout basicLay;
-    ImageView slice;
     Button delBtn;
 
     int cartsNum=10;
@@ -31,8 +32,6 @@ public class Cart extends AppCompatActivity {
     Button[] minusBtns=new Button[cartsNum];
     TextView[] numTxvs = new TextView[cartsNum];
     CheckBox allCheck;
-    int proNums=1; //제품수량
-    int s=0;//선택된 번호
 
 
     @Override
@@ -54,13 +53,36 @@ public class Cart extends AppCompatActivity {
             numTxvs[i]=(TextView) profiles[i].findViewById(R.id.numTxv);
         }
 
+        //프로파일레이어붙히기
         for (int i=0;i<cartsNum;i++){
             basicLay.addView(profiles[i]);//프로파일레이아웃 붙힘
-            slice = new ImageView(this);
-            slice.setBackground(getResources().getDrawable(R.drawable.slicebar));
-            basicLay.addView(slice);
         }
 
+        //수량조절버튼
+        for (int i=0;i<cartsNum;i++){
+            final int INDEX;
+            INDEX = i;
+            plusBtns[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int n= Integer.parseInt(numTxvs[INDEX].getText().toString());//제품수량
+                    n+=1;
+                    numTxvs[INDEX].setText(Integer.toString(n));
+                }
+            });
+            minusBtns[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int n= Integer.parseInt(numTxvs[INDEX].getText().toString());//제품수량
+                    if (n>1){
+                        n-=1;
+                        numTxvs[INDEX].setText(Integer.toString(n));
+                    }
+                }
+            });
+        }
+
+        //전체선택삭제
         allCheck = (CheckBox) findViewById(R.id.allCheck);
         allCheck.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

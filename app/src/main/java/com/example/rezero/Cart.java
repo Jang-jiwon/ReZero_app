@@ -32,7 +32,11 @@ public class Cart extends AppCompatActivity {
     Button[] minusBtns=new Button[cartsNum];
     TextView[] numTxvs = new TextView[cartsNum];
     CheckBox allCheck;
+    TextView[] prices = new TextView[cartsNum];//선택상품가격
 
+    TextView total,tprice;
+
+    int unDcPrice=0;//총상품가격
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +55,7 @@ public class Cart extends AppCompatActivity {
             plusBtns[i] = (Button) profiles[i].findViewById(R.id.plusbtn);
             minusBtns[i] = (Button) profiles[i].findViewById(R.id.minusbtn);
             numTxvs[i]=(TextView) profiles[i].findViewById(R.id.numTxv);
+            prices[i]=(TextView) profiles[i].findViewById(R.id.price);
         }
 
         //프로파일레이어붙히기
@@ -111,6 +116,38 @@ public class Cart extends AppCompatActivity {
                 }
             }
         });
+
+        // 총 상품가격
+        tprice = (TextView) findViewById(R.id.tprice);
+        total = (TextView) findViewById(R.id.total);
+        for (int i=0;i<cartsNum;i++){
+            final int INDEX;
+            INDEX = i;
+            checkBoxes[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    if (b==true){
+                        unDcPrice +=Integer.parseInt(prices[INDEX].getText().toString().replace("원",""));
+                        tprice.setText(Integer.toString(unDcPrice));
+                        total.setText(Integer.toString(unDcPrice));
+                    }else{
+                        unDcPrice -=Integer.parseInt(prices[INDEX].getText().toString().replace("원",""));
+                        tprice.setText(Integer.toString(unDcPrice));
+                        total.setText(Integer.toString(unDcPrice));
+                    }
+                }
+            });
+        }
+
+        /*int p=0;//선택상품가격
+        //선택상품가격집계
+        for (int i=0;i<cartsNum;i++){
+            if(checkBoxes[i].isChecked()==true){
+                p+=Integer.parseInt(prices[i].getText().toString().replace("원",""));
+            }else {
+                p-=Integer.parseInt(prices[i].getText().toString().replace("원",""));
+            }
+        }*/
 
     }
 }

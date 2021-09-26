@@ -52,6 +52,7 @@
                         android:textColor="#263959"
                         android:text="제로웨이스트 제품이름"/>
                     <TextView
+                        android:id="@+id/price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="10000원"/>

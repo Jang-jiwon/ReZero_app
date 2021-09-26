@@ -3,6 +3,7 @@ package com.example.rezero;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -37,6 +38,8 @@ public class Cart extends AppCompatActivity {
     TextView total,tprice;
 
     int unDcPrice=0;//총상품가격
+
+    Button orderBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -139,15 +142,15 @@ public class Cart extends AppCompatActivity {
             });
         }
 
-        /*int p=0;//선택상품가격
-        //선택상품가격집계
-        for (int i=0;i<cartsNum;i++){
-            if(checkBoxes[i].isChecked()==true){
-                p+=Integer.parseInt(prices[i].getText().toString().replace("원",""));
-            }else {
-                p-=Integer.parseInt(prices[i].getText().toString().replace("원",""));
+        //주문하기버튼이벤트
+        Intent goOrder = new Intent(getApplicationContext(),Order.class);
+        orderBtn = (Button) findViewById(R.id.orderBtn);
+        orderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(goOrder);
             }
-        }*/
+        });
 
     }
 }

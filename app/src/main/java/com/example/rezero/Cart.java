@@ -7,27 +7,33 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Cart extends AppCompatActivity {
 
     LinearLayout basicLay;
-    LinearLayout profil,profil2,profil3;
-    CheckBox check;
-    TextView dName;
-
     ImageView slice;
+    Button delBtn;
 
     int cartsNum=10;
     View[] profiles = new View[cartsNum];
     CheckBox[] checkBoxes = new CheckBox[cartsNum];
+    Button[] plusBtns=new Button[cartsNum];
+    Button[] minusBtns=new Button[cartsNum];
+    TextView[] numTxvs = new TextView[cartsNum];
     CheckBox allCheck;
+    int proNums=1; //제품수량
+    int s=0;//선택된 번호
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,16 +45,22 @@ public class Cart extends AppCompatActivity {
         LayoutInflater mInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
 
+        //프로필레이아웃의 객체들생성
         for (int i=0;i<cartsNum;i++){
-            profiles[i] = mInflater.inflate(R.layout.profile, null);
+            profiles[i] = mInflater.inflate(R.layout.profile, null);//프로파일레이아웃을 인플레이트
             checkBoxes[i] = (CheckBox) profiles[i].findViewById(R.id.check);
+            plusBtns[i] = (Button) profiles[i].findViewById(R.id.plusbtn);
+            minusBtns[i] = (Button) profiles[i].findViewById(R.id.minusbtn);
+            numTxvs[i]=(TextView) profiles[i].findViewById(R.id.numTxv);
         }
+
         for (int i=0;i<cartsNum;i++){
-            basicLay.addView(profiles[i]);
+            basicLay.addView(profiles[i]);//프로파일레이아웃 붙힘
             slice = new ImageView(this);
             slice.setBackground(getResources().getDrawable(R.drawable.slicebar));
             basicLay.addView(slice);
         }
+
         allCheck = (CheckBox) findViewById(R.id.allCheck);
         allCheck.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -60,6 +72,19 @@ public class Cart extends AppCompatActivity {
                 }else {
                     for (int i=0;i<cartsNum;i++){
                         checkBoxes[i].setChecked(false);
+                    }
+                }
+            }
+        });
+
+        //선택삭제
+        delBtn = (Button) findViewById(R.id.delBtn);
+        delBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for (int i=0;i<cartsNum;i++){
+                    if (checkBoxes[i].isChecked()==true){
+                        basicLay.removeView(profiles[i]);
                     }
                 }
             }

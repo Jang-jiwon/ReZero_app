@@ -23,6 +23,8 @@ import org.w3c.dom.Text;
 
 public class Cart extends AppCompatActivity {
 
+    public static Context context;//다른액티비티에서 변수사용할수있도록
+
     LinearLayout basicLay;
     Button delBtn;
 
@@ -45,6 +47,8 @@ public class Cart extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
+
+        context = this;//다른액티비티에서 사용할 수 있도록
 
         //스크롤뷰 제일 아래에 깔리는 배경 레이아웃
         basicLay = (LinearLayout) findViewById(R.id.basicLay);

@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.8"
+        android:layout_weight="1"
         android:layout_marginHorizontal="10dp"
         android:layout_marginVertical="15dp">
         <ImageButton
@@ -43,16 +43,56 @@
         android:layout_height="wrap_content"
         android:background="@drawable/slicebar"/>
 
-    <!--<ExpandableListView
-        android:padding="30dp"
+    <LinearLayout
+        android:id="@+id/orderList"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
+        <TextView
+            android:gravity="right"
+            android:layout_weight="4"
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="주문 상품 총"
+            android:textSize="17dp"
+            android:textColor="#263959"/>
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="17dp"
+            android:textColor="#263959"/>
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="개"
+            android:textSize="17dp"
+            android:textColor="#263959"/>
+        <ImageView
+            android:gravity="center"
+            android:layout_weight="2"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/downbtn2"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_marginVertical="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
-        android:id="@+id/mylist"
-        android:divider="#0000FF00"/>-->
+        android:background="@drawable/slicebar"/>
+
     <LinearLayout
         android:layout_margin="10dp"
-        android:layout_weight="5"
+        android:layout_weight="7"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical">
@@ -145,13 +185,12 @@
             android:drawableRight="@drawable/downbtn2"/>
     </LinearLayout>
     <ImageView
-        android:layout_marginVertical="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/slicebar"/>
     <LinearLayout
         android:layout_margin="10dp"
-        android:layout_weight="3"
+        android:layout_weight="5"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical">
@@ -233,7 +272,6 @@
         </LinearLayout>
     </LinearLayout>
     <ImageView
-        android:layout_marginVertical="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/slicebar"/>
@@ -411,7 +449,7 @@
         android:id="@+id/orderBtn"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.2"
+        android:layout_weight="1.5"
         android:layout_marginVertical="5dp"
         android:layout_marginHorizontal="20dp"
         android:text="0 원주문하기"

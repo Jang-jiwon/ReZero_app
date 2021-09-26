@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -25,6 +26,8 @@ public class Cart extends AppCompatActivity {
 
     int cartsNum=10;
     View[] profiles = new View[cartsNum];
+    CheckBox[] checkBoxes = new CheckBox[cartsNum];
+    CheckBox allCheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +38,10 @@ public class Cart extends AppCompatActivity {
         basicLay = (LinearLayout) findViewById(R.id.basicLay);
         LayoutInflater mInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
+
         for (int i=0;i<cartsNum;i++){
             profiles[i] = mInflater.inflate(R.layout.profile, null);
-            /*TextView name = (TextView) profiles[i].findViewById(R.id.name);
-            name.setText("묭");*/
+            checkBoxes[i] = (CheckBox) profiles[i].findViewById(R.id.check);
         }
         for (int i=0;i<cartsNum;i++){
             basicLay.addView(profiles[i]);
@@ -46,6 +49,21 @@ public class Cart extends AppCompatActivity {
             slice.setBackground(getResources().getDrawable(R.drawable.slicebar));
             basicLay.addView(slice);
         }
+        allCheck = (CheckBox) findViewById(R.id.allCheck);
+        allCheck.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b==true){
+                    for (int i=0;i<cartsNum;i++){
+                        checkBoxes[i].setChecked(true);
+                    }
+                }else {
+                    for (int i=0;i<cartsNum;i++){
+                        checkBoxes[i].setChecked(false);
+                    }
+                }
+            }
+        });
 
     }
 }

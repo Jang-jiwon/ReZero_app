@@ -43,6 +43,7 @@
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable-v24/custom_check3.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable-v24/custom_check_like.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable-v24/custom_checkbox.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable-v24/customcheck_cart.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable-v24/rounding.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable-v24/rounding2.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable-v24/rounding3.xml" value="0.26979166666666665" />
@@ -50,6 +51,7 @@
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable-v24/rounding_imageback.xml" value="0.14583333333333334" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable-v24/rounding_like.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable-v24/rounding_like2.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable-v24/rounding_p_m_btn.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable-v24/roundingqna.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/background_rounding.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/carticonsize.xml" value="0.26979166666666665" />
@@ -92,6 +94,7 @@
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/fragment_woman.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/group_row.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/pricesort_btn_bottom_sheet.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/profile.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/sort_btn_bottom_sheet.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/projects/ReZero_app/app/src/main/res/layout/activity_select_product.xml" value="0.2" />
         <entry key="..\:/Users/xks64/Desktop/projects/ReZero_app/app/src/main/res/layout/fragment_detail.xml" value="0.22056159420289856" />

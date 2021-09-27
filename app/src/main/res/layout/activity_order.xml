@@ -59,6 +59,7 @@
             android:textSize="17dp"
             android:textColor="#263959"/>
         <TextView
+            android:id="@+id/cartNum"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_margin="5dp"
@@ -367,6 +368,7 @@
                 android:textSize="15dp"
                 android:textColor="@color/login_bg_green"/>
             <TextView
+                android:id="@+id/totalPrice"
                 android:textSize="15dp"
                 android:layout_marginHorizontal="5dp"
                 android:gravity="right"

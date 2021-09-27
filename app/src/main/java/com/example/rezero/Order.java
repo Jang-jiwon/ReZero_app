@@ -27,7 +27,11 @@ public class Order extends AppCompatActivity {
     View[] profiles = new View[cartsNum];
     CheckBox[] checkBoxes = new CheckBox[cartsNum];
 
-    final int n = ((Cart)Cart.context).unDcPrice;
+    final int unDcPrice = ((Cart)Cart.context).unDcPrice;
+    TextView totalPrice;
+
+    TextView cartN;
+
 
 
     @Override
@@ -48,17 +52,34 @@ public class Order extends AppCompatActivity {
 
         LayoutInflater mInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        int n=0;//선택된 상품 개수 - for문을 돌리기위해
-        //선택된 체크박스확인위해 Cart클래스의 체크박스들 가져옴
-        for (int i=0;i<cartsNum;i++){
-            /*checkBoxes[i] = ((Cart)Cart.context).checkBoxes[i];
-            if (checkBoxes[i].isChecked() == true){
-                profiles[i] = ((Cart)Cart.context).profiles[i];//체크 된 프로필만 가져오기
-                lay.addView(profiles[i]);
-            }*/
+        //일단 실험
+        /*for (int i=0;i<cartsNum;i++){
             profiles[i] = mInflater.inflate(R.layout.order_list_profil, null);
-            lay.addView(profiles[i]);
         }
+*/
+        int num=0;//선택상품개수
+        int[] n=new int[cartsNum];//선택된 상품 개수
+        //선택된 체크박스확인위해 Cart클래스의 체크박스들 가져와서 몇번째 상품들이 구매되는지 확인
+        for (int i=0;i<cartsNum;i++){
+            checkBoxes[i] = ((Cart)Cart.context).checkBoxes[i];
+            if(checkBoxes[i].isChecked()==true){
+                n[i]=i;
+                num+=1;
+            }else{
+                n[i]=-1;
+            }
+        }
+        //선택된상품만 표시
+        for (int i=0;i<cartsNum;i++){
+            if (n[i]>=0){
+                profiles[n[i]] = mInflater.inflate(R.layout.order_list_profil, null);
+                lay.addView(profiles[i]);
+            }
+        }
+
+        cartN = (TextView)findViewById(R.id.cartNum);
+        cartN.setText(Integer.toString(num));
+
 
 
         orderList = (LinearLayout) findViewById(R.id.orderList);
@@ -73,6 +94,10 @@ public class Order extends AppCompatActivity {
                 dlg.show();
             }
         });
+
+        totalPrice = (TextView) findViewById(R.id.totalPrice);
+        totalPrice.setText(Integer.toString(unDcPrice));
+
 
     }
 }

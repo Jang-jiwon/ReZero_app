@@ -43,6 +43,8 @@ public class Cart extends AppCompatActivity {
 
     Button orderBtn;
 
+    int n=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,7 +79,7 @@ public class Cart extends AppCompatActivity {
             plusBtns[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    int n= Integer.parseInt(numTxvs[INDEX].getText().toString());//제품수량
+                    n= Integer.parseInt(numTxvs[INDEX].getText().toString());//제품수량
                     n+=1;
                     numTxvs[INDEX].setText(Integer.toString(n));
                 }

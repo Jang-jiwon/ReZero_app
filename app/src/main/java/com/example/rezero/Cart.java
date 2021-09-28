@@ -43,6 +43,7 @@ public class Cart extends AppCompatActivity {
 
     Button orderBtn;
 
+    //제품수량
     int n=0;
 
     @Override
@@ -72,29 +73,53 @@ public class Cart extends AppCompatActivity {
             basicLay.addView(profiles[i]);//프로파일레이아웃 붙힘
         }
 
-        //수량조절버튼
+        //수량조절 및 수량에 따른 각 항목별 총액
+        int [] minitotal = new int[cartsNum];
+        for (int i=0;i<cartsNum;i++){//각항목총가격초기화
+            n= Integer.parseInt(numTxvs[i].getText().toString());//제품수량
+            minitotal[i] = n*Integer.parseInt(prices[i].getText().toString().replace("원",""));
+        }
+
         for (int i=0;i<cartsNum;i++){
             final int INDEX;
             INDEX = i;
-            plusBtns[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    n= Integer.parseInt(numTxvs[INDEX].getText().toString());//제품수량
-                    n+=1;
-                    numTxvs[INDEX].setText(Integer.toString(n));
-                }
-            });
-            minusBtns[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    int n= Integer.parseInt(numTxvs[INDEX].getText().toString());//제품수량
-                    if (n>1){
-                        n-=1;
+            if(checkBoxes[i].isChecked()==false){
+                plusBtns[i].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        n= Integer.parseInt(numTxvs[INDEX].getText().toString());//제품수량
+                        n+=1;
                         numTxvs[INDEX].setText(Integer.toString(n));
+                        minitotal[INDEX] = n*Integer.parseInt(prices[INDEX].getText().toString().replace("원",""));
                     }
-                }
-            });
+                });
+                minusBtns[i].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        int n= Integer.parseInt(numTxvs[INDEX].getText().toString());//제품수량
+                        if (n>1){
+                            n-=1;
+                            numTxvs[INDEX].setText(Integer.toString(n));
+                            minitotal[INDEX] = n*Integer.parseInt(prices[INDEX].getText().toString().replace("원",""));
+                        }
+                    }
+                });
+            }else{
+                plusBtns[i].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(getApplicationContext(),"체크를 해제 후 수정해주세요.",Toast.LENGTH_SHORT).show();
+                    }
+                });
+                minusBtns[i].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(getApplicationContext(),"체크를 해제 후 수정해주세요.",Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
         }
+
 
         //전체선택
         allCheck = (CheckBox) findViewById(R.id.allCheck);
@@ -126,7 +151,7 @@ public class Cart extends AppCompatActivity {
             }
         });
 
-        // 총 상품가격
+        // 총 상품가격입력
         tprice = (TextView) findViewById(R.id.tprice);
         total = (TextView) findViewById(R.id.total);
         for (int i=0;i<cartsNum;i++){
@@ -136,13 +161,15 @@ public class Cart extends AppCompatActivity {
                 @Override
                 public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                     if (b==true){
-                        unDcPrice +=Integer.parseInt(prices[INDEX].getText().toString().replace("원",""));
+                        unDcPrice += minitotal[INDEX];
+                        //unDcPrice +=Integer.parseInt(prices[INDEX].getText().toString().replace("원",""));
                         tprice.setText(Integer.toString(unDcPrice));
                         total.setText(Integer.toString(unDcPrice));
                     }else{
-                        unDcPrice -=Integer.parseInt(prices[INDEX].getText().toString().replace("원",""));
-                        tprice.setText(Integer.toString(unDcPrice));
-                        total.setText(Integer.toString(unDcPrice));
+                        unDcPrice -= minitotal[INDEX];
+                        //unDcPrice -=Integer.parseInt(prices[INDEX].getText().toString().replace("원",""));
+                        tprice.setText(Integer.toString(0));
+                        total.setText(Integer.toString(0));
                     }
                 }
             });

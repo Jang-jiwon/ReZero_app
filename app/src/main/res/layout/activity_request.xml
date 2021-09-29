@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Drequest"
+    android:padding="10dp">
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="배송 요청 사항"
+        android:textSize="18dp"
+        android:textColor="#55967E"/>
+    <RadioGroup
+        android:id="@+id/dgroup"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/ra0"
+            android:textColor="#6D819C"
+            android:button="@drawable/custom_check"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="    부재시 경비실에 맡겨주세요."/>
+        <RadioButton
+            android:id="@+id/ra1"
+            android:textColor="#6D819C"
+            android:button="@drawable/custom_check"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="    부재 시 집 앞에 놔주세요."/>
+        <RadioButton
+            android:id="@+id/ra2"
+            android:textColor="#6D819C"
+            android:button="@drawable/custom_check"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="    택배함에 놔주세요."/>
+        <RadioButton
+            android:id="@+id/ra3"
+            android:textColor="#6D819C"
+            android:button="@drawable/custom_check"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="    배송 전에 연락주세요."/>
+    </RadioGroup>
+    <Button
+        android:layout_margin="10dp"
+        android:id="@+id/okbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        android:textColor="@color/white"
+        android:background="@drawable/rounding3"/>
+</LinearLayout>

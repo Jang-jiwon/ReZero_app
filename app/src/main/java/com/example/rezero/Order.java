@@ -5,13 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,6 +35,9 @@ public class Order extends AppCompatActivity {
 
     TextView cartN;
 
+    Button request;
+
+    String m ;
 
 
     @Override
@@ -99,5 +105,16 @@ public class Order extends AppCompatActivity {
         totalPrice.setText(Integer.toString(unDcPrice));
 
 
+        request = (Button) findViewById(R.id.request);
+        request.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Drequest drequest = new Drequest(Order.this);
+                drequest.callFunction(request);
+            }
+        });
+
+
     }
+
 }

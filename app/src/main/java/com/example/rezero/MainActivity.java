@@ -22,9 +22,10 @@ public class MainActivity extends AppCompatActivity {
 
     public static Context context;
 
-    private ViewPager mViewPager;
+
     private ContentsPagerAdapter mContentPagerAdapter;
     private TabLayout mTabLayout;
+    private ViewPager mViewPager;
     private Context mContext;
 
     ImageButton homeBtn,boxBtn,likeBtn,myBtn,btnOpenDrawer,cartBtn;

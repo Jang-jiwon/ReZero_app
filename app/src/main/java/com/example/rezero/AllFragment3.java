@@ -71,12 +71,11 @@ public class AllFragment3 extends Fragment {
 
     // 세로줄수 - column 가로줄수 - dataNum/column
     TableLayout table;
-    int column = 2;
-    int dataNum = 20;
+    private int column = 3;
+    private int dataNum = 21;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
         this.context = getContext();
@@ -88,68 +87,64 @@ public class AllFragment3 extends Fragment {
 
         //TableRow tableRow = new TableRow(this);
         TableRow[] tableRow = new TableRow[dataNum/column];
-        for (int i=0; i<dataNum/column;i++){
+        for (int i = 0; i < (dataNum/column); i++){
             tableRow[i] = new TableRow(getContext());
-            tableRow[i].setPadding(10,10,10,10);
+            tableRow[i].setPadding(10,10,10,20);
             tableRow[i].setLayoutParams(new TableRow.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT));
         }
 
-
-        int r=1;
+        int r = 1;
         RelativeLayout.LayoutParams likeBtnParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
-        for(int i = 0 ; i <(dataNum/column) ; i++) {
-            for (int j=0;j<column;j++){
-                //렐러티브레이아웃크기조정을위한 리니어
-                LinearLayout lilay= new LinearLayout(getContext());
+        for(int i = 0;i < (dataNum/column); i++) {
+            for (int j = 0;j < column;j++){
+                //렐러티브레이아웃 크기조정을위한 리니어
+                LinearLayout lilay = new LinearLayout(getContext());
                 lilay.setGravity(Gravity.CENTER);
                 lilay.setOrientation(LinearLayout.VERTICAL);
+
                 //제품이미지배경레이어
                 RelativeLayout ry = new RelativeLayout(getContext());
-                ry.setPadding(5,5,20,20);
+                ry.setPadding(5,5,20,25);
                 ry.setLayoutParams(new RelativeLayout.LayoutParams(300,300));
+
                 // 여기에 사진백그라운드로부착
                 ry.setBackground(getResources().getDrawable(R.drawable.eximg));
+
                 //좋이여버튼생성
                 CheckBox likeBtn = new CheckBox(getContext());
+                likeBtn.setChecked(true);
                 likeBtn.setButtonDrawable(R.drawable.custom_checkbox);
                 likeBtn.setBackgroundColor(Color.TRANSPARENT);
                 likeBtn.setLayoutParams(likeBtnParams);
                 likeBtnParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
                 likeBtnParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+
                 //좋아요버튼부착
                 ry.addView(likeBtn);
-                //순위
-                TextView rank = new TextView(getContext());
-                rank.setText( Integer.toString(r));
-                rank.setTextColor(Color.parseColor("#55967E"));
-                rank.setPadding(120,5,0,5);
-                //슬라이스바
-                ImageView s = new ImageView(getContext());
-                s.setImageDrawable(getResources().getDrawable(R.drawable.customsbar));
-                s.setScaleType(ImageView.ScaleType.FIT_CENTER);
+
                 //상품명이랑가격
                 TextView pName= new TextView(getContext());
                 pName.setText("상품명");
                 pName.setTextSize(18);
                 pName.setTextColor(Color.parseColor("#263959"));
-                pName.setPadding(115,5,0,5);
+                pName.setPadding(35,5,0,7);
+
                 TextView pPrice= new TextView(getContext());
                 pPrice.setText("가격");
                 pPrice.setTextSize(14);
                 pPrice.setTextColor(Color.parseColor("#6D819C"));
-                pPrice.setPadding(120,5,0,5);
+                pPrice.setPadding(40,5,0,10);
+
                 lilay.addView(ry);
-                lilay.addView(rank);
-                lilay.addView(s);
                 lilay.addView(pName);
                 lilay.addView(pPrice);
                 tableRow[i].addView(lilay);
                 r += 1;
             }
         }
-        for(int i=0;i<dataNum/column;i++){
+        for(int i = 0;i < (dataNum/column);i++){
             table.addView(tableRow[i]);
         }
 

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -35,7 +36,7 @@ public class Order extends AppCompatActivity {
 
     TextView cartN;
 
-    Button request;
+    Button request,orderBtn;
 
     String m ;
 
@@ -111,6 +112,15 @@ public class Order extends AppCompatActivity {
             public void onClick(View view) {
                 Drequest drequest = new Drequest(Order.this);
                 drequest.callFunction(request);
+            }
+        });
+
+        orderBtn = (Button) findViewById(R.id.orderBtn);
+        orderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent goPaid = new Intent(Order.this,Paid.class);
+                startActivity(goPaid);
             }
         });
 

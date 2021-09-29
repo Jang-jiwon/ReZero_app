@@ -79,7 +79,9 @@ public class MainActivity extends AppCompatActivity {
             likeBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
+                    // 좋아요 화면으로 이동
+                    Intent intent = new Intent(MainActivity.this, product_like.class);
+                    startActivity(intent);
                 }
             });
             myBtn.setOnClickListener(new View.OnClickListener() {

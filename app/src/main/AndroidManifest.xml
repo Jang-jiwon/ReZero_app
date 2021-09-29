@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Product_registration"
+            android:exported="true" />
+        <activity
             android:name=".DesignerList"
             android:exported="true" />
         <activity

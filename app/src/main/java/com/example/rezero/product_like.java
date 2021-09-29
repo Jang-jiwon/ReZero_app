@@ -31,7 +31,7 @@ public class product_like extends AppCompatActivity {
         myBtn = (ImageButton) findViewById(R.id.myBtn);
 
         mViewPager = (ViewPager) findViewById(R.id.pager_content);
-        ContentsPagerAdapter mContentsPagerAdapter = new ContentsPagerAdapter(getSupportFragmentManager(),1);
+        LikePageAdapter mContentsPagerAdapter = new LikePageAdapter(getSupportFragmentManager(),1);
         mViewPager.setAdapter(mContentsPagerAdapter);
 
 

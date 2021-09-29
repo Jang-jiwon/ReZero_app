@@ -1,5 +1,7 @@
 package com.example.rezero;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -29,8 +33,6 @@ public class DesignerFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
-    ArrayList<ListV> designerDataList;
 
     private View view;
 
@@ -67,6 +69,14 @@ public class DesignerFragment extends Fragment {
         }
     }
 
+
+    public static Context context;
+    LinearLayout layout;
+    int DESIGNER_NUM=10;
+    View[] profiles = new View[DESIGNER_NUM];
+    CheckBox[] likes = new CheckBox[DESIGNER_NUM];
+    View[] like_profiles = new View[DESIGNER_NUM];
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -74,32 +84,24 @@ public class DesignerFragment extends Fragment {
 
         view = inflater.inflate(R.layout.fragment_designer, container, false);
 
-        this.InitializeMovieData();
+        context = container.getContext();
 
-        ListView listView = (ListView)view.findViewById(R.id.listView);
-        final ListAdapter listAdapter = new ListAdapter(getContext(),designerDataList);
 
-        listView.setAdapter(listAdapter);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-            @Override
-            public void onItemClick(AdapterView parent, View v, int position, long id){
-                Toast.makeText(getContext().getApplicationContext(),
-                        listAdapter.getItem(position).getDesignerName(),
-                        Toast.LENGTH_LONG).show();
+        layout = (LinearLayout) view.findViewById(R.id.layout_de);
+        LayoutInflater mInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        for (int i=0;i<DESIGNER_NUM;i++){
+            profiles[i] = mInflater.inflate(R.layout.activity_list, null);
+            likes[i] = (CheckBox)profiles[i].findViewById(R.id.likeDesigner);
+            layout.addView(profiles[i]);
+        }
+        for (int i=0;i<DESIGNER_NUM;i++){
+            if (likes[i].isChecked()==true){
+                like_profiles[i] = profiles[i];
             }
-        });
+        }
+
 
         return view;
     }
 
-    public void InitializeMovieData()
-    {
-        designerDataList = new ArrayList<ListV>();
-
-        //movieDataList.add(new ListV(R.drawable.pic1, "미션임파서블","15세 이상관람가"));
-        for (int i=0;i<20;i++){
-            designerDataList.add(new ListV( "디자이너명","디자이너소개"));
-        }
-    }
 }

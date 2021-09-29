@@ -25,6 +25,7 @@ public class DesignerList extends AppCompatActivity {
         {mTabLayout = (TabLayout) findViewById(R.id.layout_tab);
 
             mTabLayout.addTab(mTabLayout.newTab().setText("디자이너"));
+            mTabLayout.addTab(mTabLayout.newTab().setText("좋아요"));
 
             mViewPager = (ViewPager) findViewById(R.id.pager_content);
              designerVpAdapter = new DesignerVpAdapter(
@@ -75,6 +76,10 @@ public class DesignerList extends AppCompatActivity {
             });
 
         }
+
+        //좋아요누르면 좋아요페이지에 디자이너 추가
+
+
 
     }
 }

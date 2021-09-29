@@ -62,72 +62,31 @@ public class MainActivity extends AppCompatActivity {
 
         //하단바 버튼 누름효과지정
         {
-            homeBtn.setOnTouchListener(new View.OnTouchListener() {
+            homeBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public boolean onTouch(View view, MotionEvent event) {
-                    if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                public void onClick(View view) {
 
-                        homeBtn.setBackgroundColor(Color.parseColor("#F5F5F5"));
-
-                    } else if (event.getAction() == MotionEvent.ACTION_UP) {
-
-                        homeBtn.setBackgroundColor(Color.WHITE);
-
-                    }
-                    return false;
                 }
             });
-            boxBtn.setOnTouchListener(new View.OnTouchListener() {
+            boxBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public boolean onTouch(View view, MotionEvent event) {
-                    if (event.getAction() == MotionEvent.ACTION_DOWN) {
-
-                        boxBtn.setBackgroundColor(Color.parseColor("#F5F5F5"));
-
-                    } else if (event.getAction() == MotionEvent.ACTION_UP) {
-
-                        boxBtn.setBackgroundColor(Color.WHITE);
-
-                    }
-                    return false;
+                public void onClick(View view) {
+                    Intent goDesigner = new Intent(MainActivity.this,DesignerList.class);
+                    startActivity(goDesigner);
                 }
             });
-            likeBtn.setOnTouchListener(new View.OnTouchListener() {
+            likeBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public boolean onTouch(View view, MotionEvent event) {
-                    //찜 화면으로 이동
-                    Intent intent = new Intent(MainActivity.this, product_like.class);
-                    startActivity(intent);
-                    if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                public void onClick(View view) {
 
-                        likeBtn.setBackgroundColor(Color.parseColor("#F5F5F5"));
-
-                    } else if (event.getAction() == MotionEvent.ACTION_UP) {
-
-                        likeBtn.setBackgroundColor(Color.WHITE);
-
-                    }
-                    return false;
                 }
             });
-            myBtn.setOnTouchListener(new View.OnTouchListener() {
+            myBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public boolean onTouch(View view, MotionEvent event) {
+                public void onClick(View view) {
                     //로그인 화면으로 이동
                     Intent intent = new Intent(MainActivity.this, login_1_activity.class);
                     startActivity(intent);
-                    if (event.getAction() == MotionEvent.ACTION_DOWN) {
-
-                        myBtn.setBackgroundColor(Color.parseColor("#F5F5F5"));
-
-                    } else if (event.getAction() == MotionEvent.ACTION_UP) {
-
-                        myBtn.setBackgroundColor(Color.WHITE);
-
-                    }
-
-
-                    return false;
                 }
             });
         }

@@ -4,11 +4,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-public class LikePageAdapter extends FragmentStatePagerAdapter {
+public class PageAdapter extends FragmentStatePagerAdapter {
 
     private int count;
 
-    public LikePageAdapter(FragmentManager fm, int count) {
+    public PageAdapter(FragmentManager fm, int count) {
         super(fm);
         this.count = count;
     }
@@ -16,9 +16,12 @@ public class LikePageAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (count){
-            case 1:
+            case 1: // 찜한 화면
                 AllFragment3 likeFragment = new AllFragment3();
                 return likeFragment;
+            case 2: // 상품 등록
+                PhotoFragment photoFragment = new PhotoFragment();
+                return photoFragment;
             default:
                 return null;
         }

@@ -17,9 +17,9 @@ public class DesignerVpAdapter extends FragmentStatePagerAdapter {
             case 0:
                 DesignerFragment designerFragment = new DesignerFragment();
                 return designerFragment;
-            case 1:
+            /*case 1:
                 LikeDesigner likeDesigner = new LikeDesigner();
-                return likeDesigner;
+                return likeDesigner;*/
 
             default:
                 return null;

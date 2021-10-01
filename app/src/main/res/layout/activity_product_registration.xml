@@ -6,11 +6,12 @@
     android:orientation="vertical"
     android:background="@color/white"
     android:fitsSystemWindows="true">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.2"
-        android:padding="5dp">
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:layout_weight="5">
 
         <ImageButton
             android:layout_width="0dp"
@@ -31,149 +32,128 @@
             android:layout_weight="10"
             android:text="상품 등록"
             android:fontFamily="@font/nanumsquare"
-            android:textSize="20dp" />
-    </LinearLayout>
-
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="13"
-        android:id="@+id/container">
-
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.appbar.CollapsingToolbarLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:contentScrim="?attr/colorPrimary"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
-                <!-- parallax: 스크롤 시 접힘 parallax-->
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="620dp"
-                    android:background="@color/white"
-                    app:layout_collapseMode="parallax"
-                    android:orientation="vertical">
-                    <androidx.viewpager.widget.ViewPager
-                        android:id="@+id/pagerBanner"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="2.5"
-                        android:background="@color/gray"
-                        />
-                    <me.relex.circleindicator.CircleIndicator
-                        android:id="@+id/indicator"
-                        app:ci_drawable="@drawable/custom_radius"
-                        app:ci_height="7dp"
-                        app:ci_width="7dp"
-                        app:ci_margin="1dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.3"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="20dp"
-                            android:layout_marginVertical="10dp"
-                            android:text="제품명"
-                            android:textColor="#898989"
-                            android:textSize="18dp" />
-
-                        <EditText
-                            android:id="@+id/product_name"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/shape"
-                            android:drawableRight="@drawable/searchsize"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:hint="제품 이름을 입력해주세요"/>
-
-                        <TextView
-                            android:id="@+id/textView"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="20dp"
-                            android:layout_marginVertical="10dp"
-                            android:text="가격"
-                            android:textColor="#898989"
-                            android:textSize="18dp" />
-
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="20dp"
-                            android:layout_marginVertical="10dp"
-                            android:text="제품소개"
-                            android:textColor="#898989"
-                            android:textSize="18dp" />
-
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="20dp"
-                            android:layout_marginVertical="10dp"
-                            android:text="제품설명"
-                            android:textColor="#898989"
-                            android:textSize="18dp" />
-
-                    </LinearLayout>
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-                <!-- pin: 스크롤 시 고정 -->
-
-            </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-            <!-- 뷰페이저와 연결할 탭 -->
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabLayout"
-                android:background="@color/white"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:tabGravity="fill"
-                app:tabTextColor="#AEAEAE"
-                app:tabSelectedTextColor="#55967E"
-                app:tabIndicatorColor="#55967E"
-                app:tabTextAppearance="@style/TabText">
-            </com.google.android.material.tabs.TabLayout>
-
-        </com.google.android.material.appbar.AppBarLayout>
-
-        <!-- 뷰페이저 (layout_behavior를 "@string/appbar_scrolling_view_behavior"로 설정해야함! ) -->
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:paddingVertical="5dp">
-
-        <Button
-            android:id="@+id/registration_Btn"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:text="상품 등록하기"
-            android:background="@drawable/rounding3"
-            android:textColor="@color/white"
-            android:fontFamily="@font/nanumsquare"
             android:textSize="20dp"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/Photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="제품명"
+                android:textColor="#878787"
+                android:textSize="15dp"/>
+
+            <EditText
+                android:id="@+id/product_name_write"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="10"
+                android:background="@drawable/registration_border"
+                android:paddingRight="15dp"
+                android:paddingLeft="10dp"
+                android:hint="제품명을 입력하세요."
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/product_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="가격"
+                android:textColor="#878787"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/product_price_write"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="10"
+                android:background="@drawable/registration_border"
+                android:paddingRight="15dp"
+                android:paddingLeft="10dp"
+                android:hint="숫자만 입력 가능합니다."
+                android:digits="0123456789"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/product_introduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="제품소개"
+                android:textColor="#878787"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/product_introduction_write"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="10"
+                android:background="@drawable/registration_border"
+                android:paddingRight="15dp"
+                android:paddingLeft="10dp"
+                android:hint="작품에 대한 한줄 소개를 입력하세요."
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/product_explanation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="작품설명"
+                android:textColor="#878787"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/product_explanation_write"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="10"
+                android:background="@drawable/registration_border"
+                android:paddingRight="15dp"
+                android:paddingLeft="10dp"
+                android:hint="작품에 대한 자세한 설명을 입력하세요."/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/registration_Btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounding3"
+        android:fontFamily="@font/nanumsquare"
+        android:text="상품 등록하기"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
 
 </LinearLayout>

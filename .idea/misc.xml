@@ -68,7 +68,6 @@
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/activity_designer.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/activity_designer_list.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/activity_kitchen.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/activity_like_designer.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/activity_list.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/activity_order.xml" value="0.25364583333333335" />
@@ -89,7 +88,6 @@
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/fragment_detail.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/fragment_food.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/fragment_kitchen.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/fragment_like_designer.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/fragment_living.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/fragment_mission.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/fragment_new.xml" value="0.25364583333333335" />
@@ -109,11 +107,17 @@
         <entry key="..\:/Users/xks64/Desktop/projects/ReZero_app/app/src/main/res/layout/activity_select_product.xml" value="0.2" />
         <entry key="..\:/Users/xks64/Desktop/projects/ReZero_app/app/src/main/res/layout/fragment_detail.xml" value="0.22056159420289856" />
         <entry key="..\:/Users/yoony/AndroidStudioProjects/ReZero_app/app/src/main/res/layout/activity_product_select.xml" value="0.1" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/drawable-v24/custom_check.xml" value="0.26564102564102565" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/drawable-v24/custom_check2.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/drawable-v24/custom_check3.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/drawable-v24/custom_checkbox.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/drawable/customsbar.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/drawable/registration_border.xml" value="0.26564102564102565" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_cart.xml" value="0.12335359675785208" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_kitchen.xml" value="0.2509057971014493" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_main.xml" value="0.182518115942029" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_order.xml" value="0.24682971014492755" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_paid.xml" value="0.12335359675785208" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_product_like.xml" value="0.2" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_product_registration.xml" value="0.2509057971014493" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_re.xml" value="0.2509057971014493" />
@@ -123,8 +127,17 @@
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_all2.xml" value="0.182518115942029" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_all3.xml" value="0.2509057971014493" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_best.xml" value="0.182518115942029" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_cos.xml" value="0.12335359675785208" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_designer.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_food.xml" value="0.24682971014492755" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_like.xml" value="0.182518115942029" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_pet.xml" value="0.12335359675785208" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_product.xml" value="0.24682971014492755" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_today.xml" value="0.182518115942029" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/group_row.xml" value="0.12335359675785208" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/login_new.xml" value="0.12335359675785208" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/profile.xml" value="0.24682971014492755" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/registration_border.xml" value="0.24682971014492755" />
       </map>
     </option>
   </component>

@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     // 좋아요 화면으로 이동
-                    Intent intent = new Intent(MainActivity.this, product_like.class);
+                    Intent intent = new Intent(MainActivity.this, Coupon.class); // 원래대로
                     startActivity(intent);
                 }
             });

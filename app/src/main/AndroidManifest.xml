@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".point"
+            android:exported="true" />
+        <activity
             android:name=".Coupon"
             android:exported="true" />
         <activity

@@ -70,7 +70,7 @@
                     android:layout_margin="5dp"
                     android:background="@android:color/transparent"
                     app:srcCompat="@drawable/coupon_design_1"
-                    android:onClick="onCouponClick"/>
+                    android:onClick="onCouponClick1"/>
 
                 <ImageButton
                     android:id="@+id/coupon_btn2"
@@ -79,7 +79,7 @@
                     android:layout_margin="5dp"
                     android:background="@android:color/transparent"
                     app:srcCompat="@drawable/coupon_design_2"
-                    android:onClick="onCouponClick" />
+                    android:onClick="onCouponClick2" />
 
                 <ImageButton
                     android:id="@+id/coupon_btn3"
@@ -88,7 +88,7 @@
                     android:layout_margin="5dp"
                     android:background="@android:color/transparent"
                     app:srcCompat="@drawable/coupon_design_3"
-                    android:onClick="onCouponClick" />
+                    android:onClick="onCouponClick3" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

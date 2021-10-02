@@ -18,6 +18,8 @@ import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.Set;
+
 public class MainActivity extends AppCompatActivity {
 
     public static Context context;
@@ -66,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
             homeBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
+                    Intent intent = new Intent(getApplicationContext(),SettingP.class);
+                    startActivity(intent);
                 }
             });
             boxBtn.setOnClickListener(new View.OnClickListener() {

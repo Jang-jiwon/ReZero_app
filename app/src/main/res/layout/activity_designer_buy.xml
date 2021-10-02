@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:layout_weight="10">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/backBtn"
+            android:padding="13dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/backbtn"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/registration_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="6dp"
+            android:layout_weight="10"
+            android:text="결제 목록"
+            android:fontFamily="@font/nanumsquare"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/allCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="40"
+                    android:button="@drawable/custom_allcheck"
+                    android:text="    날짜 전체선택"
+                    android:textColor="#6D819C"
+                    android:textSize="16dp" />
+
+                <ImageButton
+                    android:id="@+id/clear_choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="20"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/clear_choice" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/line0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/slicebar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/allCheck_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="40"
+                    android:button="@drawable/custom_allcheck"
+                    android:text="    주문일 2021.10.03"
+                    android:textColor="#6D819C"
+                    android:textSize="16dp" />
+
+                <ImageButton
+                    android:id="@+id/clear_choice_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="20"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/right_arrow" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="10"
+                android:background="@drawable/slicebar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/allCheck_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="30"
+                    android:button="@drawable/custom_allcheck"
+                    android:text="  전체선택"
+                    android:textColor="#6D819C"
+                    android:textSize="16dp" />
+
+                <CheckBox
+                    android:id="@+id/allCheck_no_delivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="30"
+                    android:button="@drawable/custom_allcheck"
+                    android:text="  발송제외"
+                    android:textColor="#6D819C"
+                    android:textSize="16dp" />
+
+                <ImageButton
+                    android:id="@+id/clear_choice2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="60"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/clear_choice" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="10"
+                android:background="@drawable/slicebar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/allCheck_delivery1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="40"
+                    android:button="@drawable/custom_allcheck"
+                    android:text="    주문 번호\n    주문자 이름\n    배송여부 : 상품준비중"
+                    android:textColor="#6D819C"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="10"
+                android:background="@drawable/slicebar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/allCheck_delivery2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="40"
+                    android:button="@drawable/custom_allcheck"
+                    android:text="    주문 번호\n    주문자 이름\n    배송여부 : 배송완료"
+                    android:textColor="#6D819C"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/line5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="10"
+                android:background="@drawable/slicebar" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

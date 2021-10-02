@@ -56,13 +56,6 @@
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable-v24/roundingqna.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/background_rounding.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/carticonsize.xml" value="0.26979166666666665" />
-        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/custom_switch.xml" value="0.26979166666666665" />
-        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/custom_thumb.xml" value="0.26979166666666665" />
-        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/custom_thumb_off.xml" value="0.26979166666666665" />
-        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/custom_thumb_on.xml" value="0.26979166666666665" />
-        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/custom_track.xml" value="0.26979166666666665" />
-        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/custom_track_off.xml" value="0.26979166666666665" />
-        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/custom_track_on.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/customsbar.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/gobtnsize.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/drawable/rating_theme.xml" value="0.26979166666666665" />
@@ -85,7 +78,6 @@
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/activity_request.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/activity_select_product.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/activity_setting.xml" value="0.2390625" />
-        <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/activity_setting_p.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/bottom_sheet.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/calstyle.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/category_btn_bottom_sheet.xml" value="0.25364583333333335" />
@@ -119,21 +111,38 @@
         <entry key="..\:/Users/xks64/Desktop/projects/ReZero_app/app/src/main/res/layout/activity_select_product.xml" value="0.2" />
         <entry key="..\:/Users/xks64/Desktop/projects/ReZero_app/app/src/main/res/layout/fragment_detail.xml" value="0.22056159420289856" />
         <entry key="..\:/Users/yoony/AndroidStudioProjects/ReZero_app/app/src/main/res/layout/activity_product_select.xml" value="0.1" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/drawable-v24/custom_allcheck.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/drawable-v24/custom_check.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/drawable-v24/custom_check2.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/drawable-v24/custom_check3.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/drawable-v24/custom_checkbox.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/drawable/background_rounding.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/drawable/boxsize.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/drawable/carticonsize.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/drawable/customsbar.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_buy_btn_bottom_sheet.xml" value="0.20153985507246377" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_cart.xml" value="0.20153985507246377" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_coupon.xml" value="0.264" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_designer_buy.xml" value="0.264" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_designer_list.xml" value="0.20153985507246377" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_main.xml" value="0.182518115942029" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_order.xml" value="0.20153985507246377" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_point.xml" value="0.20153985507246377" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_product_like.xml" value="0.2" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_product_registration.xml" value="0.2509057971014493" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_re.xml" value="0.2509057971014493" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_request.xml" value="0.2509057971014493" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_select_product.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_setting_p.xml" value="0.20153985507246377" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_zero.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/custom_tab.xml" value="0.20153985507246377" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_all2.xml" value="0.182518115942029" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_all3.xml" value="0.2509057971014493" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_best.xml" value="0.182518115942029" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_designer.xml" value="0.20153985507246377" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_detail.xml" value="0.20153985507246377" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_like.xml" value="0.182518115942029" />
+        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_pency.xml" value="0.20153985507246377" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_today.xml" value="0.182518115942029" />
       </map>
     </option>

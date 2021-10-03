@@ -83,33 +83,17 @@
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/slicebar" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/allCheck_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|center_vertical"
-                    android:layout_marginLeft="15dp"
-                    android:layout_weight="40"
-                    android:button="@drawable/custom_allcheck"
-                    android:text="    주문일 2021.10.03"
-                    android:textColor="#6D819C"
-                    android:textSize="16dp" />
-
-                <ImageButton
-                    android:id="@+id/clear_choice_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_weight="20"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/right_arrow" />
-
-            </LinearLayout>
+            <CheckBox
+                android:id="@+id/allCheck_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="40"
+                android:button="@drawable/custom_allcheck"
+                android:text="    주문일 2021.10.03"
+                android:textColor="#6D819C"
+                android:textSize="16dp" />
 
             <ImageView
                 android:id="@+id/line1"
@@ -121,6 +105,7 @@
                 android:background="@drawable/slicebar" />
 
             <LinearLayout
+                android:id="@+id/detail_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">

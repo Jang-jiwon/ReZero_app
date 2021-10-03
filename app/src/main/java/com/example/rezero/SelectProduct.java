@@ -9,6 +9,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
@@ -20,6 +21,9 @@ public class SelectProduct extends AppCompatActivity {
     ScrollView scroll;
     Button butBtn,intent_designer;
 
+
+    ImageButton backBtn;
+
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -27,6 +31,15 @@ public class SelectProduct extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_product);
+
+        backBtn = (ImageButton)findViewById(R.id.backBtn);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         ViewPager viewPager = (ViewPager) findViewById(R.id.pagerBanner);
         CircleIndicator indicator = (CircleIndicator)findViewById(R.id.indicator);
         ProductImgAdapter adapter = new ProductImgAdapter(getSupportFragmentManager());//탭레이아웃대신 서클 인디케이터

@@ -13,6 +13,15 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Book"
+            android:exported="true" />
+        <activity
+            android:name=".Pancy"
+            android:exported="true" />
+        <activity
+            android:name=".Living"
+            android:exported="true" />
+        <activity
             android:name=".Bath"
             android:exported="true" />
         <activity

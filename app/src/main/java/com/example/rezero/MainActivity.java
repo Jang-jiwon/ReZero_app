@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton homeBtn,boxBtn,likeBtn,myBtn,btnOpenDrawer,cartBtn;
 
     //드로우바 메뉴의 버튼객체 선언
-    Button kitchenBtn,bathBtn;
+    Button kitchenBtn,bathBtn,livingBtn,pencyBtn,bookBtn;
 
 
     //로그인 변수
@@ -253,6 +253,33 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        livingBtn = (Button) findViewById(R.id.livingBtn);
+        livingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Living.class);
+                startActivity(intent);
+            }
+        });
+        pencyBtn = (Button) findViewById(R.id.pencyBtn);
+        pencyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Pancy.class);
+                startActivity(intent);
+            }
+        });
+
+        bookBtn = (Button) findViewById(R.id.bookBtn);
+        bookBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Book.class);
+                startActivity(intent);
+            }
+        });
+
+
 
 
     }

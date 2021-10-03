@@ -10,13 +10,15 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class Designer_buy extends AppCompatActivity {
 
-    LinearLayout main_layout;
-    ImageButton clear_choice2;
+    LinearLayout main_layout, detail_layout;
+    ImageButton clear_choice2, clear_choice;
+    ImageView line1, line2;
 
     int cartsNum=8;
     View[] profiles = new View[cartsNum];
@@ -71,6 +73,24 @@ public class Designer_buy extends AppCompatActivity {
                 } else {
                     allCheck_date.setChecked(false);
                 }
+            }
+        });
+
+        // 날짜 전체 선택 삭제
+        clear_choice = (ImageButton) findViewById(R.id.clear_choice);
+        detail_layout = (LinearLayout) findViewById(R.id.detail_layout);
+        line1 = (ImageView) findViewById(R.id.line1);
+        line2 = (ImageView) findViewById(R.id.line2);
+        clear_choice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for (int i=0;i<cartsNum;i++){
+                    main_layout.removeView(profiles[i]);
+                }
+                allCheck_date.setVisibility(View.GONE);
+                detail_layout.setVisibility(View.GONE);
+                line1.setVisibility(View.GONE);
+                line2.setVisibility(View.GONE);
             }
         });
 

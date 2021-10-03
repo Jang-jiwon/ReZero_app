@@ -5,18 +5,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Coupon extends AppCompatActivity {
 
     private ImageButton coupon_btn1, coupon_btn2, coupon_btn3;
     private int coupon_num1 = 0, coupon_num2 = 0, coupon_num3 = 0;
+    private ImageView back;
 
     private int id = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coupon);
+
+        // 뒤로가기
+        back = (ImageView) findViewById(R.id.backBtn);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         coupon_btn1 = (ImageButton)findViewById(R.id.coupon_btn1);
         coupon_btn2 = (ImageButton)findViewById(R.id.coupon_btn2);

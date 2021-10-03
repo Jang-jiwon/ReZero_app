@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton homeBtn,boxBtn,likeBtn,myBtn,btnOpenDrawer,cartBtn;
 
     //드로우바 메뉴의 버튼객체 선언
-    Button kitchenBtn;
+    Button kitchenBtn,bathBtn;
 
 
     //로그인 변수
@@ -245,6 +245,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        bathBtn = (Button) findViewById(R.id.bathBtn);
+        bathBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Bath.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

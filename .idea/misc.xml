@@ -3,36 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/drawable-v24/carticonsize.xml" value="0.22864583333333333" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/drawable/carticonsize.xml" value="0.28854166666666664" />
         <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/drawable/login_bg.xml" value="0.2" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/drawable/searchsize.xml" value="0.28854166666666664" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/font/font_nanoom_extra.xml" value="0.246875" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/activity_cart.xml" value="0.2682291666666667" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/activity_coupon.xml" value="0.2682291666666667" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/activity_designer.xml" value="0.2682291666666667" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/activity_kitchen.xml" value="0.2682291666666667" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/activity_list.xml" value="0.2682291666666667" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/activity_main.xml" value="0.21" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/activity_order.xml" value="0.2682291666666667" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/activity_paid.xml" value="0.2682291666666667" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/activity_point.xml" value="0.2682291666666667" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/activity_product_like.xml" value="0.2682291666666667" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/activity_product_registration.xml" value="0.2682291666666667" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/designer_mypage_1.xml" value="0.17447916666666666" />
+        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/activity_main.xml" value="0.18229166666666666" />
         <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/login_1_.xml" value="0.16893115942028986" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/login_find.xml" value="0.17604166666666668" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/login_find_id.xml" value="0.17604166666666668" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/login_id_fail.xml" value="0.17604166666666668" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/login_new.xml" value="0.20833333333333334" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/login_pwd_dialog.xml" value="0.17447916666666666" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/login_pwd_new_1.xml" value="0.17447916666666666" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/new_designer_2.xml" value="0.17604166666666668" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/new_user_1.xml" value="0.20833333333333334" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/new_user_success.xml" value="0.20833333333333334" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/order_list_profil.xml" value="0.20833333333333334" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/user_mypage_1.xml" value="0.17604166666666668" />
-        <entry key="..\:/Users/skfmf/Study/AndroidStudio/ReZero_app/app/src/main/res/layout/user_mypage_2_delete.xml" value="0.17447916666666666" />
         <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/background_rounding.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/black_ladius.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/xks64/AndroidStudioProjects/app/src/main/res/drawable/boxbtn.xml" value="0.26979166666666665" />
@@ -136,6 +109,9 @@
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/request.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_1/app/src/main/res/layout/sort_btn_bottom_sheet.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_app/app/src/main/res/drawable/img_round.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/xks64/Desktop/ReZero_app/app/src/main/res/layout/activity_bath.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/xks64/Desktop/ReZero_app/app/src/main/res/layout/activity_kitchen.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/xks64/Desktop/ReZero_app/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_app/app/src/main/res/layout/best_product_view.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_app/app/src/main/res/layout/fragment_all2.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/xks64/Desktop/ReZero_app/app/src/main/res/layout/fragment_product.xml" value="0.25364583333333335" />
@@ -170,8 +146,6 @@
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/activity_zero.xml" value="0.2509057971014493" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/custom_tab.xml" value="0.20153985507246377" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/designer_buy_profile.xml" value="0.264" />
-        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/designer_buy_profile_dno.xml" value="0.19746376811594202" />
-        <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/designer_buy_profile_dyes.xml" value="0.19746376811594202" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_all2.xml" value="0.182518115942029" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_all3.xml" value="0.2509057971014493" />
         <entry key="..\:/Users/yoony/StudioProjects/ReZero_app/app/src/main/res/layout/fragment_best.xml" value="0.182518115942029" />

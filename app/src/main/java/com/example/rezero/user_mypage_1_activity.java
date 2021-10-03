@@ -9,6 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -367,8 +368,8 @@ public class user_mypage_1_activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // 쿠폰 페이지 - 아래 주석 삭제
-                // Intent intent = new Intent(user_mypage_1.this, Coupon.class);
-                /*
+                Intent intent = new Intent(user_mypage_1_activity.this, Coupon.class);
+
                 intent.putExtra("login", login+"");
 
                 intent.putExtra("login_user_email", login_user_email);
@@ -389,8 +390,8 @@ public class user_mypage_1_activity extends AppCompatActivity {
                 intent.putExtra("login_user_review", login_user_review);
                 intent.putExtra("login_user_chat", login_user_chat);
 
-                Log.i("login_1 -> 로그인함? ", String.valueOf(login)); */
-                // startActivity(intent);
+                Log.i("login_1 -> 로그인함? ", String.valueOf(login));
+                startActivity(intent);
             }
         });
 
@@ -399,9 +400,8 @@ public class user_mypage_1_activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // 포인트 페이지 - 아래 주석 삭제
-                // Intent intent = new Intent(user_mypage_1.this, point.class);
+                Intent intent = new Intent(user_mypage_1_activity.this, point.class);
 
-                /*
                 intent.putExtra("login", login+"");
 
                 intent.putExtra("login_user_email", login_user_email);
@@ -422,9 +422,9 @@ public class user_mypage_1_activity extends AppCompatActivity {
                 intent.putExtra("login_user_review", login_user_review);
                 intent.putExtra("login_user_chat", login_user_chat);
 
-                Log.i("login_1 -> 로그인함? ", String.valueOf(login)); */
+                Log.i("login_1 -> 로그인함? ", String.valueOf(login));
 
-                // startActivity(intent);
+                startActivity(intent);
             }
         });
 
@@ -433,6 +433,8 @@ public class user_mypage_1_activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // 문의내역 페이지 - 아래 주석 삭제
+                //짧게 알람 문구 보여주기 - 확인용
+                Toast.makeText(getApplicationContext(), "문의 내역은 서비스 구현 중입니다. 죄송합니다!", Toast.LENGTH_SHORT).show();
                 // Intent intent = new Intent(user_mypage_1.this, 문의내역.class);
                 /*
                 intent.putExtra("login", login+"");
@@ -466,9 +468,8 @@ public class user_mypage_1_activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // 설정 페이지 - 아래 주석 삭제
-                // Intent intent = new Intent(user_mypage_1.this, SettingP.class);
+                Intent intent = new Intent(user_mypage_1_activity.this, SettingP.class);
 
-                /*
                 intent.putExtra("login", login+"");
 
                 intent.putExtra("login_user_email", login_user_email);
@@ -489,9 +490,9 @@ public class user_mypage_1_activity extends AppCompatActivity {
                 intent.putExtra("login_user_review", login_user_review);
                 intent.putExtra("login_user_chat", login_user_chat);
 
-                Log.i("login_1 -> 로그인함? ", String.valueOf(login)); */
+                Log.i("login_1 -> 로그인함? ", String.valueOf(login));
 
-                // startActivity(intent);
+                startActivity(intent);
             }
         });
 

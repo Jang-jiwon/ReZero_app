@@ -13,6 +13,18 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Woman"
+            android:exported="true" />
+        <activity
+            android:name=".Pet"
+            android:exported="true" />
+        <activity
+            android:name=".Cosm"
+            android:exported="true" />
+        <activity
+            android:name=".Food"
+            android:exported="true" />
+        <activity
             android:name=".Book"
             android:exported="true" />
         <activity

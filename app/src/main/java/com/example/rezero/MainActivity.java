@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton homeBtn,boxBtn,likeBtn,myBtn,btnOpenDrawer,cartBtn;
 
     //드로우바 메뉴의 버튼객체 선언
-    Button kitchenBtn,bathBtn,livingBtn,pencyBtn,bookBtn;
+    Button kitchenBtn,bathBtn,livingBtn,pencyBtn,bookBtn,foodBtn,cosmBtn,petBtn,womanBtn;
 
 
     //로그인 변수
@@ -278,9 +278,40 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        foodBtn = (Button) findViewById(R.id.foodBtn);
+        foodBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Food.class);
+                startActivity(intent);
+            }
+        });
 
+        cosmBtn = (Button) findViewById(R.id.cosmBtn);
+        cosmBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Cosm.class);
+                startActivity(intent);
+            }
+        });
+        petBtn = (Button)findViewById(R.id.petBtn);
+        petBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Pet.class);
+                startActivity(intent);
+            }
+        });
 
-
+        womanBtn= (Button)findViewById(R.id.womanBtn);
+        womanBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Woman.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

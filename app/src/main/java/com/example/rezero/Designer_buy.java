@@ -18,8 +18,8 @@ public class Designer_buy extends AppCompatActivity {
     int cartsNum=4;
     View[] profiles = new View[cartsNum];
     CheckBox[] checkBoxes = new CheckBox[cartsNum];
-    Button[] plusBtns=new Button[cartsNum];
-    Button[] minusBtns=new Button[cartsNum];
+    Button[] detail_button = new Button[cartsNum];
+
     TextView[] numTxvs = new TextView[cartsNum];
     CheckBox allCheck;
     TextView[] prices = new TextView[cartsNum];//선택상품가격
@@ -37,7 +37,7 @@ public class Designer_buy extends AppCompatActivity {
         for (int i=0;i<cartsNum;i++){
             profiles[i] = mInflater.inflate(R.layout.designer_buy_profile, null);//프로파일레이아웃을 인플레이트
             checkBoxes[i] = (CheckBox) profiles[i].findViewById(R.id.check);
-            //plusBtns[i] = (Button) profiles[i].findViewById(R.id.plusbtn);
+            detail_button[i] = (Button) profiles[i].findViewById(R.id.detail_button);
             //minusBtns[i] = (Button) profiles[i].findViewById(R.id.minusbtn);
             //numTxvs[i]=(TextView) profiles[i].findViewById(R.id.numTxv);
             //prices[i]=(TextView) profiles[i].findViewById(R.id.price);

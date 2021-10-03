@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@drawable/login_pwd_dialog"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="322dp"
+    android:layout_height="155dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textColor="@color/login_bg_green"
+            android:layout_margin="10dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/nanumsquare_extra"
+            android:text="인증 오류"
+            android:layout_weight="0.7"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.4"
+            android:textSize="18sp"
+            android:fontFamily="@font/nanumsquare"
+            android:text="인증 번호가 일치하지 않습니다.\n확인 후 재시도 바랍니다."
+            android:textColor="@color/login_find_blue_few"
+            android:alpha="0.7"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1.5"
+            android:layout_gravity="right">
+
+            <Button
+                android:id="@+id/btnSave"
+                android:text="확인"
+                android:textSize="14dp"
+                android:fontFamily="@font/nanumsquare_extra"
+                android:layout_marginLeft="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/login_bg_green"
+                android:scaleType="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/login_white"
+    android:id ="@+id/user_mypage_2_delete_layout_all"
+    tools:context=".user_mypage_2_delete_activity">
+
+    <!-- 타이틀 -->
+    <LinearLayout
+        android:id="@+id/login_find_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:layout_weight="10">
+
+        <ImageView
+            android:id="@+id/login_find_image_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_find_1_back"
+            android:layout_gravity="center"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="7"
+            android:fontFamily="@font/nanumsquare"
+            android:text="회원 탈퇴"
+            android:textAlignment="center"
+            android:textColor="@color/login_find_blue_few"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquare"
+            android:text="          "
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+    </LinearLayout>
+    <!-- 타이틀 끝 -->
+
+    <!-- 본문 시작 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:orientation="vertical">
+
+
+        <!-- 회원 정보가 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="60dp"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/login_find_blue_few"
+                android:textSize="28sp"
+                android:fontFamily="@font/nanumsquare"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회원 탈퇴 전 반드시 확인해주세요 😥"
+                android:textColor="@color/login_find_blue_few"
+                android:textSize="25sp"
+                android:fontFamily="@font/nanumsquare"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text = "💫  계정과 관련된 정보는 복구가 불가하며\n　   30일 이후 재가입 가능합니다."
+                android:fontFamily="@font/nanumsquare_light"
+                android:textStyle="bold"
+                android:textColor="@color/login_bg_green"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text = "💎  잔여 포인트와 쿠폰은 모두 사라집니다."
+                android:fontFamily="@font/nanumsquare_light"
+                android:textStyle="bold"
+                android:textColor="@color/login_bg_green"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text = "⚡  재가입 시 첫 혜택을 받을 수 없습니다.\n　   (첫 구매 쿠폰 등)"
+                android:fontFamily="@font/nanumsquare_light"
+                android:textStyle="bold"
+                android:textColor="@color/login_bg_green"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <!-- 이전화면으로 돌아가기 버튼 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="0.2">
+
+            <TextView
+                android:id="@+id/email_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:text = "위 사항을 모두 숙지하신 뒤 진행해주세요!"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/nanumsquare_extra"
+                android:textStyle="bold"
+                android:textColor="@color/login_find_gray_few"
+                android:textSize="18sp"/>
+
+
+            <!-- 회원 가입 버튼 -->
+            <FrameLayout
+                android:layout_width="340dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom|center">
+
+                <View
+                    android:id="@+id/user_mypage_2_delete_view_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/new_user_1_rectangle_blue_radius"
+                    android:layout_margin="3dp"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.8"
+                    android:fontFamily="@font/nanumsquare"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:textAlignment="center"
+                    android:text="회원 탈퇴"
+                    android:textColor="@color/login_white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"></TextView>
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

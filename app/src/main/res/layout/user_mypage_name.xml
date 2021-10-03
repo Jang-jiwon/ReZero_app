@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/login_white"
+    android:id ="@+id/user_mypage_name_layout_all"
+    tools:context=".user_mypage_1_activity">
+
+    <!-- 타이틀 -->
+    <LinearLayout
+        android:id="@+id/login_find_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:layout_weight="10">
+
+        <ImageView
+            android:id="@+id/login_find_image_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_find_1_back"
+            android:layout_gravity="center"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="7"
+            android:fontFamily="@font/nanumsquare"
+            android:text="내 정보"
+            android:textAlignment="center"
+            android:textColor="@color/login_find_blue_few"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquare"
+            android:text="          "
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+    </LinearLayout>
+    <!-- 타이틀 끝 -->
+
+    <!-- 본문 시작 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:orientation="vertical">
+
+
+        <!-- 이름 이메일 표시 -->
+        <LinearLayout
+            android:id="@+id/user_mypage_name_layout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_mypage_name_textview_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름"
+                android:fontFamily="@font/nanumsquare_extra"
+                android:textSize="30sp"
+                android:textColor="@color/login_navy"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/user_mypage_name_textview_email"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="이메일"
+                android:textColor="@color/login_navy"
+                android:textSize="20sp"
+                android:fontFamily="@font/nanumsquare"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        <!-- 이름 이메일 표시 끝 -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/user_mypage_name_graybluefewbar"
+            android:alpha="1"/>
+
+        <!-- 회원 정보 수정 ~ 로그아웃-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <!-- 회원 정보 수정 -->
+            <TextView
+                android:id="@+id/user_mypage_name_textview_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="회원 정보 수정"
+                android:textColor="@color/login_bg_green"
+                android:fontFamily="@font/nanumsquare"
+                android:textSize="24sp"
+                android:gravity="center|left"
+                android:layout_weight="1"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@drawable/user_mypage_name_graybluefewbar"
+                android:alpha="1"/>
+
+            <!-- 환불 계좌 관리 -->
+            <TextView
+                android:id="@+id/user_mypage_name_textview_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="환불 계좌 관리"
+                android:textColor="@color/login_bg_green"
+                android:fontFamily="@font/nanumsquare"
+                android:textSize="24sp"
+                android:gravity="center|left"
+                android:layout_weight="1"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/user_mypage_name_graybluefewbar"
+                android:alpha="1"/>
+
+            <!-- 로그아웃 -->
+            <TextView
+                android:id="@+id/user_mypage_name_textview_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="로그인"
+                android:paddingLeft="20dp"
+                android:textColor="@color/login_bg_green"
+                android:fontFamily="@font/nanumsquare"
+                android:textSize="24sp"
+                android:gravity="center|left"
+                android:layout_weight="1"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/user_mypage_name_graybluefewbar"
+                android:alpha="1"/>
+
+            <!-- 회원 탈퇴 -->
+            <TextView
+                android:id="@+id/user_mypage_name_textview_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp"
+                android:text="회원 탈퇴"
+                android:textColor="@color/login_bg_green"
+                android:fontFamily="@font/nanumsquare_light"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="left"
+                android:layout_weight="0.3"/>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!-- 본문 끝 -->
+
+
+</LinearLayout>

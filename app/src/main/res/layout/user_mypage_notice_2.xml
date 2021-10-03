@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id ="@+id/user_mypage_notice_layout_all"
+    tools:context=".user_mypage_notice_activity">
+
+    <!-- 타이틀 -->
+    <LinearLayout
+        android:id="@+id/login_find_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:layout_weight="10">
+
+        <ImageView
+            android:id="@+id/login_find_image_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_find_1_back"
+            android:layout_gravity="center"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="7"
+            android:fontFamily="@font/nanumsquare"
+            android:text="공지사항"
+            android:textAlignment="center"
+            android:textColor="@color/login_find_blue_few"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquare"
+            android:text="          "
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+    </LinearLayout>
+    <!-- 타이틀 끝 -->
+
+    <!-- 본문 시작 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/user_mypage_notice_layout_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center|top"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/user_mypage_notice_textview_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="두번째 공지사항"
+                    android:fontFamily="@font/nanumsquare"
+                    android:textStyle="bold"
+                    android:textColor="@color/login_navy"
+                    android:textSize="26sp"
+                    android:layout_marginBottom="10dp"
+                    android:alpha="0.8"/>
+
+                <TextView
+                    android:id="@+id/user_mypage_notice_textview_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2021.09.08"
+                    android:fontFamily="@font/nanumsquare_light"
+                    android:textStyle="bold"
+                    android:textColor="@color/login_find_gray_few"
+                    android:alpha="0.6"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="20sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@drawable/login_find_graybar"
+                    android:alpha="0.2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/user_mypage_notice_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:layout_weight="0"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center|top"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/user_mypage_notice_list_textview_title_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="공지사항 내용은 다음과 같습니다.\n현재 앱은 아직 개발단계에 \n진행 중입니다.\n많은 양해 부탁드리며 감사합니다 :)"
+                        android:fontFamily="@font/nanumsquare_light"
+                        android:textStyle="bold"
+                        android:textColor="@color/login_navy"
+                        android:textSize="24sp"
+                        android:layout_marginBottom="10dp"
+                        android:alpha="0.8"/>
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="13"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 본문 끝 -->
+</LinearLayout>
+</LinearLayout>

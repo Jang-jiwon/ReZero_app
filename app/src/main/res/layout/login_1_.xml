@@ -22,7 +22,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:textAlignment="center"
-        android:layout_weight="3"/>
+        android:layout_weight="2.7"/>
 
     <LinearLayout
         android:id="@+id/login_layout_1"
@@ -33,8 +33,9 @@
         android:gravity="center_horizontal">
 
         <FrameLayout
-            android:layout_width="320dp"
-            android:layout_height="50dp">
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp">
 
             <View
                 android:id="@+id/login_id_view"
@@ -61,7 +62,7 @@
                     android:gravity="center"
                     android:layout_marginLeft="3dp"
                     android:textAlignment="center"
-                    android:text="아이디"
+                    android:text="이메일"
                     android:textColor="@color/login_white"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -80,9 +81,9 @@
                     tools:text="skfmf7878"></EditText></LinearLayout></FrameLayout>
 
         <FrameLayout
-            android:layout_width="320dp"
+            android:layout_width="340dp"
             android:layout_height="50dp"
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="3dp">
 
             <View
                 android:id="@+id/login_pwd_view"
@@ -128,9 +129,9 @@
                     tools:text="1234"></EditText></LinearLayout></FrameLayout>
 
         <FrameLayout
-            android:layout_width="320dp"
+            android:layout_width="340dp"
             android:layout_height="50dp"
-            android:layout_marginTop="17dp">
+            android:layout_marginTop="60dp">
 
             <View
                 android:id="@+id/login_login_view"
@@ -158,8 +159,9 @@
         </FrameLayout>
 
         <FrameLayout
-            android:layout_width="320dp"
-            android:layout_height="50dp">
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="3dp">
 
             <View
                 android:id="@+id/login_new_view"
@@ -190,7 +192,7 @@
             android:id="@+id/login_find_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="17dp"
+            android:layout_marginTop="40dp"
             android:fontFamily="@font/nanumsquare"
             android:text="@string/login_find"
             android:gravity="center|top"

@@ -117,7 +117,35 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter></activity>
         -->
-        <activity android:name=".login_new_activity" />
+
+        <!-- eunsoo -->
+        <activity android:name=".login_new_activity" />\
+        <activity android:name=".new_user_1_activity" />
+        <activity android:name=".new_designer_1_activity" />
+        <activity android:name=".new_designer_2_activity" />
+        <activity android:name=".new_user_success_activity"></activity>
+        <activity android:name=".login_find_activity"/>
+        <activity android:name=".login_id_success"/>
+        <activity android:name=".login_id_fail"/>
+        <activity android:name=".login_pwd_new2_activity"/>
+        <activity android:name=".login_pwd_new_activity"/>
+        <activity android:name=".user_mypage_1_activity"/>
+
+        <activity android:name=".designer_mypage_1"></activity>
+        <activity android:name=".user_mypage_name_activity"></activity>
+        <activity android:name=".user_mypage_delivery_activity"></activity>
+        <activity android:name=".user_mypage_notice_activity"></activity>
+        <activity android:name=".user_mypage_review_activity"></activity>
+        <activity android:name=".user_mypage_2_delete_activity"></activity>
+        <activity android:name=".user_mypage_2_info_activity"></activity>
+        <activity android:name=".user_mypage_2_info_bank_activity"></activity>
+        <activity android:name=".user_mypage_2_info_phone_activity"></activity>
+        <activity android:name=".user_mypage_2_info_pwd_activity"></activity>
+        <activity android:name=".user_mypage_2_info_bank_success"></activity>
+        <activity android:name=".user_mypage_2_info_phone_success"></activity>
+        <activity android:name=".user_mypage_notice_2_activity"></activity>
+
+
     </application>
 
 </manifest>

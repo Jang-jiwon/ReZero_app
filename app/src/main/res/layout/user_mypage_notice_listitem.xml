@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_margin="40dp"
+    android:id ="@+id/user_mypage_notice_list_layout_all">
+
+    <TextView
+        android:id="@+id/user_mypage_notice_list_textview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="공지사항 제목"
+        android:fontFamily="@font/nanumsquare"
+        android:textStyle="bold"
+        android:textColor="@color/login_navy"
+        android:textSize="26sp"
+        android:layout_marginBottom="10dp"
+        android:alpha="0.8"/>
+
+    <TextView
+        android:id="@+id/user_mypage_notice_list_textview_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2021.08.23"
+        android:fontFamily="@font/nanumsquare_light"
+        android:textStyle="bold"
+        android:textColor="@color/login_find_gray_few"
+        android:alpha="0.6"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@drawable/login_find_graybar"
+        android:alpha="0.2"/>
+
+</LinearLayout>

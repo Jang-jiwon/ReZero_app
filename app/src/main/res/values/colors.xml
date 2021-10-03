@@ -12,4 +12,17 @@
     <color name="login_white">#FFFFFF</color>
     <color name="login_navy">#263959</color>
     <color name="gray">#CECECE</color>
+    <!-- login_find -->
+    <color name="login_find_green_few">#55967E</color>
+    <color name="login_find_gray_few">#AEAEAE</color>
+    <color name="login_find_blue_few">#6d819c</color>
+    <color name="login_find_blue_few_alpha">#216d819c</color>
+    <color name="login_find_navy">#263959</color>
+    <color name="login_find_navy_alpha">#25263959</color>
+    <color name="login_find_gray_few_alpha">#EFF0F3</color>
+    <color name="login_find_green_few_alpha">#3955967E</color>
+    <!-- login_pwd_1 -->
+    <color name="login_pwd_red">#FF0000</color>
+    <!-- user_mypage_name -->
+    <color name="user_mypage_gray_blue_few">#E5E8ED</color>
 </resources>

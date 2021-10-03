@@ -1,0 +1,164 @@
+<!-- 아이디 찾기 화면 넣음 X-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id ="@+id/login_find_layout_all"
+    tools:context=".login_find_activity"
+    android:background="@color/login_white">
+
+    <!-- 타이틀 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:id="@+id/login_find_layout_title"
+        android:layout_weight="0">
+
+        <ImageView
+            android:id="@+id/login_find_image_back"
+            android:alpha="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_find_1_back"
+            android:layout_gravity="center"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="7"
+            android:fontFamily="@font/nanumsquare"
+            android:text="아이디 찾기"
+            android:textAlignment="center"
+            android:textColor="@color/login_find_blue_few"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquare"
+            android:text="          "
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+    </LinearLayout>
+    <!-- 타이틀 끝 -->
+
+    <!-- 회원 정보가 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_weight="2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/login_find_blue_few"
+            android:textSize="28sp"
+            android:fontFamily="@font/nanumsquare"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/login_id_success_textview_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquare"
+            android:textColor="@color/login_find_blue_few"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            tools:text="abcdef@naver.com" />
+
+        <TextView
+            android:id="@+id/email_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text = "이메일 찾기 결과입니다.\n개인정보보호를 위해 뒷자리는 ***으로 표시했습니다."
+            android:fontFamily="@font/nanumsquare_light"
+            android:textStyle="bold"
+            android:textColor="@color/login_find_navy"
+            android:textSize="17sp"/>
+    </LinearLayout>
+
+    <!-- 이전화면으로 돌아가기 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1.5">
+
+        <FrameLayout
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="7dp">
+
+            <View
+                android:id="@+id/login_id_success_view_login"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/login_rectangle_navy"
+                android:layout_margin="3dp"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:fontFamily="@font/nanumsquare"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="3dp"
+                android:textAlignment="center"
+                android:text="로그인하러 가기"
+                android:textColor="@color/login_white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_weight="1"></TextView>
+        </FrameLayout>
+
+        <!-- 회원 가입 버튼 -->
+        <FrameLayout
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/login_id_success_view_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/login_rectangle_green_radius_13"
+                android:layout_margin="3dp"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:fontFamily="@font/nanumsquare"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="3dp"
+                android:textAlignment="center"
+                android:text="비밀번호 찾기"
+                android:textColor="@color/login_white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_weight="1"></TextView>
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

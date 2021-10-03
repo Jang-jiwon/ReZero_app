@@ -11,6 +11,7 @@
     <string name="login_id">아이디</string>
     <string name="login_pwd">비밀번호</string>
     <string name="login_find"><u>아이디/비밀번호 찾기</u></string>
+    <string name="new_user_1_login"><u>로그인하기</u></string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>

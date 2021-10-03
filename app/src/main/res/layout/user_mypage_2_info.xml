@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/login_white"
+    android:id ="@+id/user_mypage_2_info_layout_all"
+    tools:context=".user_mypage_2_info_activity">
+
+    <!-- 타이틀 -->
+    <LinearLayout
+        android:id="@+id/login_find_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:layout_weight="10">
+
+        <ImageView
+            android:id="@+id/login_find_image_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_find_1_back"
+            android:layout_gravity="center"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="7"
+            android:fontFamily="@font/nanumsquare"
+            android:text="회원정보 수정"
+            android:textAlignment="center"
+            android:textColor="@color/login_find_blue_few"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquare"
+            android:text="          "
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+    </LinearLayout>
+    <!-- 타이틀 끝 -->
+
+    <!-- 본문 시작 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:orientation="vertical">
+
+
+
+        <!-- Linear Layout 안에 내용 전부 넣기 -->
+        <!-- 이름, 생년월일, 핸드폰번호 내용 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/login_find_pwd_layout_all"
+            android:layout_marginTop="20dp"
+            android:layout_weight="13">
+
+            <!-- 이메일 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이메일"
+                    android:fontFamily="@font/nanumsquare_light"
+                    android:textStyle="bold"
+                    android:textColor="@color/login_find_navy"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="15dp"/>
+
+                <EditText
+                    android:id="@+id/login_find_pwd_edit_email"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:alpha="0.66"
+                    android:background="@drawable/login_find_rectangle_blue"
+                    android:fontFamily="@font/nanumsquare"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/login_find_blue_few"
+                    android:textSize="18sp"
+                    android:hint="예) 아이디@naver.com"
+                    android:enabled="false"
+                    android:textColorHint="@color/login_find_gray_few"/>
+            </LinearLayout>
+
+            <!-- 이름 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이름"
+                    android:fontFamily="@font/nanumsquare_light"
+                    android:textStyle="bold"
+                    android:textColor="@color/login_find_navy"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="15dp"/>
+
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/login_find_pwd_edit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:alpha="0.66"
+                    android:background="@drawable/login_find_rectangle_blue"
+                    android:fontFamily="@font/nanumsquare"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/login_find_blue_few"
+                    android:textSize="18sp"
+                    android:hint="이름"
+                    android:enabled="false"
+                    android:textColorHint="@color/login_find_gray_few"/>
+            </LinearLayout>
+
+            <!-- 핸드폰 번호 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="비밀번호"
+                    android:fontFamily="@font/nanumsquare_light"
+                    android:textStyle="bold"
+                    android:textColor="@color/login_find_navy"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/login_find_pwd_edit_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:alpha="0.66"
+                        android:background="@drawable/login_find_rectangle_blue"
+                        android:fontFamily="@font/nanumsquare"
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/login_find_blue_few"
+                        android:textSize="18sp"
+                        android:hint="비밀번호"
+                        android:enabled="false"
+                        android:textColorHint="@color/login_find_gray_few"
+                        android:layout_weight="1"/>
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2">
+
+                        <View
+                            android:id="@+id/login_find_pwd_view_pwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:alpha="0.5"
+                            android:background="@drawable/user_mypage_2_info_rectangle_green_box_radius"
+                            android:layout_margin="3dp"></View>
+
+                        <TextView
+                            android:id="@+id/login_find_pwd_textview_pwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:alpha="0.8"
+                            android:fontFamily="@font/nanumsquare"
+                            android:gravity="center"
+                            android:text="변경"
+                            android:textAlignment="center"
+                            android:textColor="@color/login_bg_green"
+                            android:textSize="18sp"
+                            android:textStyle="bold"></TextView>
+                    </FrameLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 인증번호 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="핸드폰 번호"
+                    android:fontFamily="@font/nanumsquare_light"
+                    android:textStyle="bold"
+                    android:textColor="@color/login_find_navy"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/login_find_pwd_edit_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:alpha="0.66"
+                        android:background="@drawable/login_find_rectangle_blue"
+                        android:fontFamily="@font/nanumsquare"
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/login_find_blue_few"
+                        android:textSize="18sp"
+                        android:hint="예) 01012345678"
+                        android:enabled="false"
+                        android:textColorHint="@color/login_find_gray_few"
+                        android:layout_weight="1"/>
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2">
+
+                        <View
+                            android:id="@+id/login_find_pwd_view_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:alpha="0.5"
+                            android:background="@drawable/user_mypage_2_info_rectangle_green_box_radius"
+                            android:layout_margin="3dp"></View>
+
+                        <TextView
+                            android:id="@+id/login_find_pwd_textview_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:alpha="0.8"
+                            android:fontFamily="@font/nanumsquare"
+                            android:gravity="center"
+                            android:text="변경"
+                            android:textAlignment="center"
+                            android:textColor="@color/login_bg_green"
+                            android:textSize="18sp"
+                            android:textStyle="bold"></TextView>
+                    </FrameLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

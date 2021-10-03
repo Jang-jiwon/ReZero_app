@@ -16,7 +16,7 @@ public class login_1_request extends StringRequest {
     //1. 서버 URL & PHP 파일 연결
 
     //서버 주소로 나중에 바꾸기
-    final static private String URL = "http://delightes.dothome.co.kr/login_check.php"; //URL은 바뀔 일 없으니까 고정 상수!
+    final static private String URL = "http://delightes.dothome.co.kr/user_db.php"; //URL은 바뀔 일 없으니까 고정 상수!
     private Map<String, String> map;
 
 

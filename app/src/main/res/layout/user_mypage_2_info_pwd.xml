@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/login_white"
+    android:id ="@+id/user_mypage_2_info_pwd_layout_all"
+    tools:context=".user_mypage_2_info_pwd_activity">
+
+    <!-- 타이틀 -->
+    <LinearLayout
+        android:id="@+id/login_find_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:layout_weight="10">
+
+        <ImageView
+            android:id="@+id/login_find_image_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_find_1_back"
+            android:layout_gravity="center"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="7"
+            android:fontFamily="@font/nanumsquare"
+            android:text="비밀번호"
+            android:textAlignment="center"
+            android:textColor="@color/login_find_blue_few"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumsquare"
+            android:text="          "
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+    </LinearLayout>
+    <!-- 타이틀 끝 -->
+
+    <!-- 본문 시작 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:orientation="vertical">
+
+        <!-- 본문 -->
+
+        <TextView
+            android:id="@+id/login_pwd_pwd_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="주기적인 비밀번호 변경은 개인정보를 안전하게\n보호하고 개인정보 도용 피해를 예방할 수 있어요"
+            android:fontFamily="@font/nanumsquare"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/login_find_gray_few"
+            android:layout_weight="2"/>
+
+        <LinearLayout
+            android:id="@+id/login_pwd_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:layout_weight="8">
+
+            <EditText
+                android:id="@+id/user_mypage_2_edittext_now"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="20dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquare"
+                android:textColor="@color/login_find_navy"
+                android:textSize="18.5sp"
+                android:hint="현재 비밀번호"
+                android:textColorHint="@color/login_find_navy_alpha"
+                android:backgroundTint="@color/login_find_gray_few_alpha"
+                android:layout_weight="0"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/user_mypage_2_textview_error1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/nanumsquare_light"
+                android:textColor="@color/login_pwd_red"
+                android:text=""
+                android:textStyle="bold"
+                android:alpha="0.7"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/user_mypage_2_edittext_new_1"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="20dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquare"
+                android:textColor="@color/login_find_navy"
+                android:textSize="18.5sp"
+                android:hint="영문, 숫자, 특수문자 포함 8자 이상"
+                android:textColorHint="@color/login_find_navy_alpha"
+                android:backgroundTint="@color/login_find_gray_few_alpha"
+                android:layout_weight="0"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/user_mypage_2_textview_error2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/nanumsquare_light"
+                android:textColor="@color/login_pwd_red"
+                android:text=""
+                android:textStyle="bold"
+                android:alpha="0.7"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/user_mypage_2_edittext_new_2"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="20dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquare"
+                android:textColor="@color/login_find_navy"
+                android:textSize="18.5sp"
+                android:hint="비밀번호 재입력"
+                android:textColorHint="@color/login_find_navy_alpha"
+                android:backgroundTint="@color/login_find_gray_few_alpha"
+                android:layout_weight="0"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/user_mypage_2_textview_error3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/nanumsquare_light"
+                android:textColor="@color/login_pwd_red"
+                android:text=""
+                android:textStyle="bold"
+                android:alpha="0.7"
+                android:textSize="16sp" />
+
+
+            <FrameLayout
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_weight="0"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center">
+
+                <View
+                    android:id="@+id/login_pwd_new_view_change"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/login_rectangle_green_alpha_radius_13"
+                    android:layout_margin="3dp"
+                    android:alpha="0.5"
+                    android:enabled="false"></View>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.8"
+                    android:fontFamily="@font/nanumsquare"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:textAlignment="center"
+                    android:text="비밀번호 변경 완료"
+                    android:textColor="@color/login_bg_green"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"></TextView>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -35,11 +35,16 @@
             android:fontFamily="@font/nanumsquare"
             android:gravity="center"
             android:padding="5dp"/>
-        <TableLayout
+        <!--<TableLayout
             android:stretchColumns="*"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/table"/>
+            android:id="@+id/table"/>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/linearTable"/>
 
 
 

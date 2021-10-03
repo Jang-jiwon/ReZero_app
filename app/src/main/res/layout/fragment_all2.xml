@@ -3,14 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProductFragment"
+    tools:context=".AllFragment2"
     android:background="@color/white"
     android:orientation="vertical">
 
-    <TableLayout
-        android:stretchColumns="*"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/table_product"/>
+        android:orientation="vertical"
+        android:id="@+id/linearTable"/>
+
+    <!--<TableLayout
+        android:stretchColumns="*"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/table_product"/>-->
 
 </ScrollView>

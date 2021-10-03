@@ -129,7 +129,7 @@
                 android:textColor="#878787"
                 android:textSize="15dp" />
 
-            <EditText
+            <Button
                 android:id="@+id/product_explanation_write"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -139,7 +139,7 @@
                 android:background="@drawable/registration_border"
                 android:paddingRight="15dp"
                 android:paddingLeft="10dp"
-                android:hint="작품에 대한 자세한 설명을 입력하세요."/>
+                android:text="작품에 대한 자세한 설명을 입력하세요."/>
 
         </LinearLayout>
 

@@ -25,6 +25,9 @@
             android:name=".Food"
             android:exported="true" />
         <activity
+            android:name=".Product_registration_write"
+            android:exported="true" />
+        <activity
             android:name=".Book"
             android:exported="true" />
         <activity

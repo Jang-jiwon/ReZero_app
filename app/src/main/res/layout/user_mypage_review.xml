@@ -56,6 +56,123 @@
         android:layout_weight="0.8"
         android:orientation="vertical">
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_margin="20dp"
+                    android:id="@+id/user_mypage_delivery_layout_box_3"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/new_designer_2_rectangle_gray_box_1">
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="제품명"
+                        android:fontFamily="@font/nanumsquare"
+                        android:layout_gravity="center"
+                        android:textColor="@color/login_navy"
+                        android:textSize="28sp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="디자이너명"
+                        android:fontFamily="@font/nanumsquare_light"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="@color/login_navy"
+                        android:textSize="24sp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="리뷰 내용"
+                        android:fontFamily="@font/nanumsquare_light"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="@color/login_navy"
+                        android:textSize="24sp"
+                        android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_margin="20dp"
+                    android:id="@+id/user_mypage_delivery_layout_box_1"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/new_designer_2_rectangle_gray_box_1">
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="제품명"
+                        android:fontFamily="@font/nanumsquare"
+                        android:layout_gravity="center"
+                        android:textColor="@color/login_navy"
+                        android:textSize="28sp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="디자이너명"
+                        android:fontFamily="@font/nanumsquare_light"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="@color/login_navy"
+                        android:textSize="24sp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="리뷰 내용"
+                        android:fontFamily="@font/nanumsquare_light"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="@color/login_navy"
+                        android:textSize="24sp"
+                        android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
     <!-- 본문 끝 -->
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

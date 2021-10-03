@@ -1,6 +1,7 @@
 package com.example.rezero;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -74,11 +75,15 @@ public class ProductFragment extends Fragment implements SortBtnBottomSheetDialo
 
     Button btnOK;
 
+
+
     private LinearLayout sortBtn,categoryBtn,priceSortBtn;
     // 세로줄수 - colum 가로줄수 - dataNum/colum
     TableLayout table;
     int colum=3;
     int dataNum=30;
+
+    View[] v= new View[dataNum];
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -123,7 +128,48 @@ public class ProductFragment extends Fragment implements SortBtnBottomSheetDialo
             }
         });
 
-        // 테이블 생성
+
+        //상품관련 - 부착 클릭이벤트
+        {
+            LinearLayout linearTable = (LinearLayout)view.findViewById(R.id.linearTable);
+            LayoutInflater mInflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            for (int i=0;i<dataNum;i++){
+                v[i] = mInflater.inflate(R.layout.product_view, null);
+
+            }
+
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0);
+            params.weight=1;
+            LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams(0, 550);
+            params2.weight=1;
+            params2.setMargins(10,0,10,0);
+
+            int n=0;
+            for (int i=0;i<dataNum/colum;i++){
+                LinearLayout layout = new LinearLayout(getContext());
+                layout.setGravity(Gravity.CENTER);
+                layout.setLayoutParams(params);
+                for (int j=0;j<colum;j++){//3까지
+                    v[n].setLayoutParams(params2);
+                    layout.addView(v[n]);
+                    n +=1 ;
+                }
+                linearTable.addView(layout);
+            }
+
+            Intent intentP = new Intent(view.getContext(), SelectProduct.class);
+
+            for (int i=0;i<dataNum;i++){
+                v[i].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(intentP);
+                    }
+                });
+            }
+        }
+
+        /*// 테이블 생성
         table = (TableLayout) view.findViewById(R.id.table_product);
 
         //TableRow tableRow = new TableRow(this);
@@ -177,7 +223,7 @@ public class ProductFragment extends Fragment implements SortBtnBottomSheetDialo
         }
         for(int i=0;i<dataNum/colum;i++){
             table.addView(tableRow[i]);
-        }
+        }*/
 
 
         return view;

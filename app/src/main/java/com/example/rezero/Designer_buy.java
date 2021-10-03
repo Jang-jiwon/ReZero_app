@@ -11,18 +11,20 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class Designer_buy extends AppCompatActivity {
 
     LinearLayout main_layout;
     ImageButton clear_choice2;
 
-    int cartsNum=4;
+    int cartsNum=8;
     View[] profiles = new View[cartsNum];
     CheckBox[] checkBoxes = new CheckBox[cartsNum];
     Button[] detail_button = new Button[cartsNum];
+    TextView[] textView = new TextView[cartsNum];
 
-    CheckBox allCheck_detail;
+    CheckBox allCheck_detail, allCheck_no_delivery, allCheck, allCheck_date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,27 +36,44 @@ public class Designer_buy extends AppCompatActivity {
         main_layout = (LinearLayout) findViewById(R.id.main_layout);
         LayoutInflater mInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        for (int i=0;i<cartsNum;i++){
+        for (int i=0;i<cartsNum/2;i++){
             profiles[i] = mInflater.inflate(R.layout.designer_buy_profile_dyes, null);//프로파일레이아웃을 인플레이트
             checkBoxes[i] = (CheckBox) profiles[i].findViewById(R.id.check);
             detail_button[i] = (Button) profiles[i].findViewById(R.id.detail_button);
+            textView[i] = (TextView)profiles[i].findViewById(R.id.d_yes_no);
         }
 
         //프로파일레이어붙히기
-        for (int i=0;i<cartsNum;i++){
+        for (int i=0;i<cartsNum/2;i++){
             main_layout.addView(profiles[i]);//프로파일레이아웃 붙힘
         }
 
-        for (int i=0;i<cartsNum;i++){
+        for (int i=cartsNum/2;i<cartsNum;i++){
             profiles[i] = mInflater.inflate(R.layout.designer_buy_profile_dno, null);//프로파일레이아웃을 인플레이트
             checkBoxes[i] = (CheckBox) profiles[i].findViewById(R.id.check);
             detail_button[i] = (Button) profiles[i].findViewById(R.id.detail_button);
+            textView[i] = (TextView)profiles[i].findViewById(R.id.d_yes_no);
         }
 
         //프로파일레이어붙히기
-        for (int i=0;i<cartsNum;i++){
+        for (int i=cartsNum/2;i<cartsNum;i++){
             main_layout.addView(profiles[i]);//프로파일레이아웃 붙힘
         }
+
+        // 날짜 전체 선택
+        allCheck = (CheckBox) findViewById(R.id.allCheck);
+        allCheck_date = (CheckBox) findViewById(R.id.allCheck_date);
+        allCheck.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b==true){
+                    allCheck_date.setChecked(true);
+                } else {
+                    allCheck_date.setChecked(false);
+                }
+            }
+        });
+
 
         //전체선택
         allCheck_detail = (CheckBox) findViewById(R.id.allCheck_detail);
@@ -62,8 +81,16 @@ public class Designer_buy extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b==true){
-                    for (int i=0;i<cartsNum;i++){
-                        checkBoxes[i].setChecked(true);
+                    if(allCheck_no_delivery.isChecked()) {
+                        for (int i=0;i<cartsNum;i++){
+                            if (textView[i].getText().equals("미발송"))
+                                checkBoxes[i].setChecked(true);
+                        }
+                    }
+                    else {
+                        for (int i = 0; i < cartsNum; i++) {
+                            checkBoxes[i].setChecked(true);
+                        }
                     }
                 }else {
                     for (int i=0;i<cartsNum;i++){
@@ -81,6 +108,27 @@ public class Designer_buy extends AppCompatActivity {
                 for (int i=0;i<cartsNum;i++){
                     if (checkBoxes[i].isChecked()==true){
                         main_layout.removeView(profiles[i]);
+                    }
+                }
+            }
+        });
+        
+        // 발송제외
+        allCheck_no_delivery = (CheckBox) findViewById(R.id.allCheck_no_delivery);
+        allCheck_no_delivery.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b==true){
+                    for (int i=0;i<cartsNum;i++){
+                        if(textView[i].getText().equals("발송")) {
+                            profiles[i].setVisibility(View.GONE);
+                        }
+                    }
+                }else {
+                    for (int i=0;i<cartsNum;i++){
+                        if(textView[i].getText().equals("발송")) {
+                            profiles[i].setVisibility(View.VISIBLE);
+                        }
                     }
                 }
             }

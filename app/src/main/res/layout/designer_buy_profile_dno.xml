@@ -31,7 +31,7 @@
             android:text="    주문 번호\n    주문자 이름\n    주문 날짜 : 2021.10.03" />
         <TextView
             android:gravity="center"
-            android:id="@+id/registration_text"
+            android:id="@+id/d_yes_no"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="6dp"

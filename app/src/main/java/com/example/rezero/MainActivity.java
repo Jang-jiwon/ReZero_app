@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         login_user_chat = intent.getStringExtra("login_user_chat");
         login_user_review = intent.getStringExtra("login_user_review");
 
-        //1. 화면 생성
+        //1. 화면 생성 앙기모찌찌
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

@@ -26,9 +26,19 @@
             android:layout_weight="30"
             android:layout_marginTop="20dp"
             android:padding="10dp"
-            android:background="@color/white"
+            android:background="@android:color/transparent"
             android:textAlignment="viewStart"
-            android:text="    주문 번호\n    주문자 이름\n    배송여부 : 상품준비중" />
+            android:text="    주문 번호\n    주문자 이름\n    주문 날짜 : 2021.10.03" />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/registration_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="6dp"
+            android:layout_weight="10"
+            android:text="발송"
+            android:fontFamily="@font/nanumsquare"
+            android:textSize="16dp"/>
     </LinearLayout>
     <ImageView
         android:layout_marginVertical="5dp"

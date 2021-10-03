@@ -25,6 +25,9 @@
             android:name=".Bath"
             android:exported="true" />
         <activity
+            android:name=".designer_buy_detail"
+            android:exported="true" />
+        <activity
             android:name=".Designer_buy"
             android:exported="true" />
         <activity
